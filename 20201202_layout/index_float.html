@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		div.b{
+			background-color: skyblue;
+			width: 300px;
+			float: left;
+			margin-right: 10px;
+			padding: 20px;
+			text-align: justify;
+		}
+		div.box{
+			background-color: skyblue;
+			width: 500px;_height: 100px;
+			/*margin-right: auto;
+			margin-left: auto;*/
+			margin: 0 auto;
+		}
+		div.box>div.box1{
+			float: left;width:200px;
+			background-color: orange;
+		}
+		div.box>div.box2{
+			float: right;width: 200px;
+			background-color: green;
+		}
+		/*div.box>div.box3{clear: both;}*/
+
+
+		.clearfix:after{content: "";display: block;clear: both;}
+		
+	</style>
+</head>
+<body>
+	<div class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolores, ipsam? Modi soluta iusto consequatur, similique. Cum, facere magni nostrum est itaque porro et cumque deserunt, minima minus aliquam, voluptate.</div>
+	Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Eveniet voluptatibus autem quod voluptatum quis mollitia ipsum hic a, asperiores officia eos? Temporibus deserunt veritatis nemo officiis enim ex repudiandae similique?
+	<img src="../images/testimg.jpg" alt="">
+	<hr>
+	<div class="box clearfix">
+		<!-- div.box$*3>lorem -->
+		<div class="box1">Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Rerum similique nam ex, perferendis non, nulla unde. Deleniti nulla, earum, adipisci facere, culpa aspernatur magni qui a aliquid, assumenda quaerat repellat!</div>
+		<div class="box2">Obcaecati accusamus minima numquam, reiciendis, modi quidem quia quaerat neque similique vero nostrum, exercitationem aut porro aliquam amet. Modi corrupti, cum aspernatur voluptatem recusandae, deserunt nisi ducimus reprehenderit totam ullam!</div>
+		<div class="box3">Similique nisi commodi, sunt maxime quidem magnam quibusdam, repellat. Reiciendis nam accusantium consequuntur, reprehenderit nulla ab odit nihil inventore iusto voluptatum porro nisi voluptate dolor repudiandae architecto ducimus minus similique!</div>
+		<!-- display:block;clear:both -->
+	</div>
+
+	Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam dolorum, quidem omnis officiis perferendis, dolores obcaecati quos ullam! Voluptatibus exercitationem cumque dolores reprehenderit repellendus harum, nesciunt iusto praesentium libero sequi.
+
+<style>
+	div.box10:before{content: "안녕하세요";}
+	div.box10:after{content: "만나서 반갑습니다";
+	display: block;
+	clear:both;
+}
+</style>
+	<div class="box10">
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam voluptatibus vitae temporibus voluptatum beatae nulla accusantium tempora. Quod dolores eos vitae obcaecati natus. Voluptatum aspernatur ab itaque quae amet perspiciatis?
+	</div>
+
+
+
+</body>
+</html>

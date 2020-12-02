@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float4</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{
+			color: #000; text-decoration: none;
+		}
+		li{list-style: none;}
+		.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		h3{text-align: center;margin: 10px;}
+		div.nav{
+			background-color:skyblue;
+			margin: 0 auto;
+			width: 500px;
+		}
+
+		div.nav>ul{}
+		div.nav>ul>li{
+			float: left;
+			width: 100px;
+			line-height: 40px;
+			cursor: pointer;
+			text-align: center;
+		}
+		div.nav>ul>li:hover{
+			background-color: #ccc;
+		}
+
+/*second box*/
+		div.visualbox{
+			background-color:orange;
+			width: 600px; height: 100px;
+			margin: 0 auto;
+		}
+		div.visualbox>ul{}
+		div.visualbox>ul>li{
+			width: 100px;
+		}
+		div.visualbox>ul>li:hover{
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<h3>logo</h3>
+	<div class="nav">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+	</div>
+
+	<div class="visualbox">
+		<ul class="clearfix">
+			<li>visual</li>
+			<li>slider</li>
+		</ul>
+	</div>
+</body>
+</html>
