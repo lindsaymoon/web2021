@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>float menu</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content: "";display: block;clear: both;}
+
+		/*nav*/
+		nav.nav{
+			width: 1000px;
+			background-color: skyblue;
+			margin:0 auto;
+		}
+		nav.nav>ul{}
+		
+		nav.nav>ul>li{float: left;width: 200px;height: 40px;}
+		nav.nav>ul>li:hover{background-color:violet;}
+		nav.nav>ul>li:hover a{color: white;}
+		nav.nav>ul>li>a{display: block;height: 40px;text-align: center;line-height: 40px;background-color: orange;} /*글씨 밖에 커서를 대도 클릭이 가능하게 만든것. 블록으로 만들어버림*//*높이도 a태그 안에서 건드려줘야지 링크손모양을 유지하면서 상자를 넓힐수있음.*//*line-height값을 넣으면 사실상 높이를 따로 넣으나마나이기 때문에 주석으로 처리해도 높이는 그대로*/
+		nav.nav>ul>li>a:hover{background-color: violet; color:white;}
+
+		/*nav.nav>ul>li{float: left;width: 200px;height: 40px;
+			background-color: orange;}
+		nav.nav>ul>li:hover{background-color:violet;}
+		nav.nav>ul>li:hover a{color: white;}
+		nav.nav>ul>li>a{display: block;height: 40px;text-align: center;line-height: 40px;}*/
+		
+
+	</style>
+</head>
+<body>
+	<header> <!-- shift+alt+w 누르면 헤더가 생김(더간편) -->
+		<nav class="nav">
+			<!-- ul>li*5>a[href="#"]>{menu$} -->
+			<ul class="clearfix">
+				<!-- before -->
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<!-- after -->
+			</ul>
+		</nav>
+
+		<div style="background-color: #ccc;">test</div>
+	</header>
+
+</body>
+</html>
