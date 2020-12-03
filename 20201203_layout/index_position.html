@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000;text-decoration: none;}
+		li{list-style: none;}
+		.clearfix:after{content: "";display: block;clear: both;}
+
+		body{
+			background-image:url(../images/bg_grid.gif);
+			/*background-repeat: no-repeat; repeat-x; repeat-y*/
+		}
+		div{width: 200px;height: 200px;}
+		div.box1{
+			background-color:violet;
+			/*position: relative;
+			left: -100px;top: 100px;*/
+			position: absolute;
+			left: 0;top: 0;
+		}
+		div.box2{
+			background-color:skyblue;
+			/*position: relative;
+			left: 200px;top: -200px;*/
+			position: absolute;
+			right: 0;top: 0;
+		}
+		div.box3{
+			background-color:orange;
+			position: absolute;
+			right: 0;bottom: 0;
+		}
+		div.box4{
+			background-color:yellow;
+			position: absolute;
+			left: 0;bottom: 0;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<!-- div.box$*4>lorem10 -->
+	<div class="box1">1. Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Corrupti, assumenda?</div>
+	<div class="box2">2. Odio dignissimos, temporibus laudantium enim eveniet in consectetur odit veritatis?</div>
+	<div class="box3">3. Delectus inventore quae tempora soluta! Labore, doloremque tenetur officia suscipit!</div>
+	<div class="box4">4. Deserunt nostrum laborum, corporis officiis necessitatibus, doloremque non nam quia.</div>
+</body>
+</html>
