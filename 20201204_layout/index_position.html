@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<!-- link:css -->
+	<link rel="stylesheet" href="css/reset.css"> <!-- 외부스타일 시트 -->
+	<style> /*내부 스타일 시트*/
+		body{background-image: url(../images/bg_grid.gif);}
+
+		/*div{width: 100px;height: 100px;}*/
+		.box1,
+		.box2,
+		.box3{width: 100px;height: 100px;}
+
+		.box1{
+			background-color: pink; /*bgc*/
+			/*position: absolute;*/ /*poa tab단축키*/
+		}
+		.box2{
+			background-color: green;
+			position: absolute;
+			right: 0;
+		}
+		.box3{
+			background-color: yellow;}
+
+		div.box{
+			width: 500px;height: 200px;
+			background-color:skyblue;
+			margin: 0 auto;
+			position: relative; 
+			}	
+	</style>
+</head>
+<body><!-- .box1 하고 탭 누르면 div 안써도됨 -->
+	<div class="box">
+		<div class="box1">1</div>
+		<div class="box2">2</div> 
+		<div class="box3">3</div>
+	</div>
+</body>
+</html>
