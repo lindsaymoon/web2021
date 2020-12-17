@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>text shadow</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<!-- link:css -->
+	<style>
+		.box{
+			width: 300px;height: 300px;
+		/*	background-image: url(../images/testimg.jpg);
+			background-repeat: no-repeat;
+			background-position: center;*/
+			background: url(../images/testimg.jpg);
+		}
+		.box h3{
+			_background: pink;color: white;
+			line-height: 300px;text-align: center;
+			text-shadow: 0px 0px 5px #000;
+		}
+		.txt{text-shadow:0px 0px 5px #000;}
+		igm{display: block;}
+
+		.box1{
+			width: 500px;
+			border: 1px solid #000;
+			padding: 10px;
+		}
+		.box1 h3{
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+
+		.box2{
+			display: table-cell;
+			width: 500px;height: 300px;
+			border: 1px solid #ccc;
+			
+		}
+		.box2 h3{
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			height: 300px;
+			width: 500px;
+		}
+
+		.box3{
+			width: 500px;height: 500px;
+			background:skyblue;padding: 20px;
+			box-sizing:border-box;
+		}
+		.box3 h3{
+			_display: none;
+			visibility: hidden;
+		}
+		.box3 p{opacity: 0.5;}
+
+		.box4{
+			width:500px;height: 100px;
+			border: 1px solid #000;
+			overflow-y: scroll;padding: 20px;
+			box-sizing: border-box;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h3 class="txt">안녕하세요</h3>
+	</div>
+
+	<div class="box1">
+		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat atque recusandae quas dignissimos natus eligendi eveniet debitis odio, voluptatem quod dicta, error, aliquid illo explicabo nobis voluptatum soluta ea placeat.</h3>
+	</div>
+
+	<div class="box2">
+		<h3>text</h3>
+	</div>
+
+	<div class="box3">
+		<h3>안녕하세요</h3>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla mollitia harum quibusdam voluptatibus pariatur. Est minus culpa labore harum, facere corrupti quod, doloremque distinctio voluptas unde autem consequuntur dolorum, odit.</p>
+	</div>
+
+	<div class="box4">
+		p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cumque distinctio maxime vel, rerum mollitia sequi corporis, ad quasi quibusdam soluta repellendus molestias, hic dolorum architecto reprehenderit! Eum facere repellat totam cum sit tempore praesentium dolor quisquam veritatis velit corrupti accusantium, repudiandae modi aut doloribus dolore provident cumque vero sunt facilis pariatur quo sequi nobis veniam. Nihil repellendus esse deserunt quae vero voluptate vitae pariatur voluptatem, provident ipsam ab suscipit quam. Dignissimos doloremque suscipit corrupti sint voluptatum, mollitia, fugit in enim consequatur, ea porro itaque. Dolorem aut asperiores ratione sequi necessitatibus temporibus, tenetur, autem quasi animi quis, molestiae praesentium placeat?
+	</div>
+</body>
+</html>

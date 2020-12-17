@@ -1,0 +1,6 @@
+@charset "utj8";
+/*reset*/
+	*{margin: 0; padding: 0;}
+	a:link, a:visited{text-decoration: none; color: #000;}
+	li{list-style: none;}
+	.clearfix:after{display: block; content: ''; clear: both; }
