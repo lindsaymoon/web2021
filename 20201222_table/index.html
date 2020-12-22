@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.tTable{
+			width: 500px;
+			border-top:2px solid #f00;
+			border-bottom:2px solid #f00;
+			font-size: 10px;
+			margin: 0 auto;
+			_border-collapse: initial;
+		}
+		.tTable td{
+			border: 1px solid #000;height: 100px;text-align: center;
+			border-right: 0 none;
+		}
+		.tTable td:first-child{border-left: 0 none;}
+	</style>
+</head>
+<body>
+	<table class="tTable">
+		<tr>
+			<td>Lorem, ipsum, dolor.</td>
+			<td>Lorem, ipsum, dolor.</td>
+			<td>Lorem, ipsum, dolor.</td>
+		</tr>
+		<tr>
+			<td>Lorem, ipsum, dolor.</td>
+			<td>Lorem, ipsum, dolor.</td>
+			<td>Lorem, ipsum, dolor.</td>
+		</tr>
+	</table>
+<!-- 	<style>
+		.uTab{
+			width: 500px;margin: 0 auto;
+			border-top: 2px solid #f00;
+			border-bottom: 2px solid #f00;
+			font-size: 10px;text-align: center;
+		}
+		.uTab li{
+			float: left;width: 166.66px;
+			border: 1px solid #000;height: 100px;
+			border-right: 0 none;
+			line-height: 100px;
+		}
+		/*.uTab li:nth-child(1),
+		.uTab li:nth-child(4){border-left: 0 none;}*/
+
+		.bln{border-left: 0 none !important;}
+	</style>	
+
+	<ul class="uTab clearfix">
+		<li class="bln">Lorem, ipsum, dolor.</li>
+		<li>Nulla animi, quidem?</li>
+		<li>Earum, dicta, tenetur!</li>
+		<li class="bln">Asperiores hic, odio.</li>
+		<li>Quod, numquam, fuga!</li>
+		<li>Optio, sequi, cum.</li>
+	</ul> -->
+	<style>
+		.boxTb1{width: 500px;font-size: 10px;}
+		.boxTb1 td,.boxTb1 th{border: 1px solid #000;padding: 10px;}
+		/*.boxTb1 th{background: skyblue;}*/
+		.skyblue{background: skyblue;}
+	</style>
+	<table class="boxTb1">
+		<tr class="skyblue">
+			<th>Lorem.</th>
+			<th>Perspiciatis.</th>
+			<th>Eveniet.</th>
+			<th>Soluta!</th>
+		</tr>
+		<tr>
+			<td rowspan="2">Lorem.</td>
+			<td>Perspiciatis.</td>
+			<td>Incidunt.</td>
+			<td>Quod!</td>
+		</tr>
+		<tr>
+			<!-- <td>Lorem.</td> -->
+			<td colspan="3">Perspiciatis.</td>
+			<!-- <td>Incidunt.</td>
+			<td>Quod!</td> -->
+		</tr>
+
+	</table>
+
+
+	<table class="boxTb1">
+		<colgroup>
+			<col width="50">
+			<col width="70">
+			<col>
+			<col width="70">
+			<col>
+			<col width="50">
+		</colgroup>
+		<tr>
+			<td rowspan="4">Lorem.</td>
+			<td class="skyblue">Labore!</td>
+			<td>Aperiam!</td>
+			<td class="skyblue">Delectus.</td>
+			<td>Aut.</td>
+			<td rowspan="4">Aperiam.</td>
+		</tr>
+		<tr>
+			<!-- <td>Lorem.</td> -->
+			<td class="skyblue">Labore!</td>
+			<td>Aperiam!</td>
+			<td class="skyblue">Delectus.</td>
+			<td>Aut.</td>
+			<!-- <td>Aperiam.</td> -->
+		</tr>
+		<tr>
+			<!-- <td>Lorem.</td> -->
+			<td class="skyblue">Labore!</td>
+			<td>Aperiam!</td>
+			<td class="skyblue">Delectus.</td>
+			<td>Aut.</td>
+			<!-- <td>Aperiam.</td> -->
+		</tr>
+		<tr>
+			<!-- <td>Lorem.</td> -->
+			<td class="skyblue">Labore!</td>
+			<td colspan="3">Aperiam!</td>
+			<!-- <td>Delectus.</td>
+			<td>Aut.</td> -->
+			<!-- <td>Aperiam.</td> -->
+		</tr>
+
+	</table>
+</body>
+</html>

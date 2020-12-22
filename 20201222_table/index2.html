@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.btb{
+			width: 500px;
+			border-top:2px solid #000;
+			border-bottom:1px solid #000;
+			font-size: 10px;
+			margin: 0 auto;
+		}
+		.btb td{
+			border: 1px solid #000;
+			text-align: center;
+			padding:5px;
+		}
+		.btb .pnal{border-left:2px solid #000;}
+		.btb .addPic{border-right:2px solid #000;}
+
+		.gray{background: #ccc}
+		
+	</style>
+</head>
+<body>
+	
+	<table class="btb">
+	<colgroup>
+		<col width="40">
+		<col width="90">
+		<col width="120">
+		<col width="90">
+		<col width="120">
+		<col width="90">
+	</colgroup>
+		<tr>
+			<td rowspan="4" class="pnal">인적사항</td>
+			<td class="gray">성명</td>
+			<td>문경현</td>
+			<td class="gray">학 교 명</td>
+			<td>oo고등학교</td>
+			<td rowspan="4" class="addPic">사진첨부</td>
+		</tr>
+		<tr>
+			
+			<td class="gray">주민등록번호</td>
+			<td></td>
+			<td class="gray">e - mail</td>
+			<td></td>
+			
+		</tr>
+		<tr>
+			
+			<td class="gray">휴 대 폰(C.P)</td>
+			<td></td>
+			<td class="gray">긴급연락처<br>(학부모)</td>
+			<td></td>
+			
+		</tr>
+		<tr>
+			
+			<td class="gray">주소</td>
+			<td colspan="3"></td>
+			
+			
+		</tr>
+	</table>
+		
+	</table>
+</body>
+</html>
