@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>practice</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<script src="../js/wow.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+	<style>
+		.box{padding: 40px 0;min-width: 1200px;}
+		.box h3,.box p{text-align: center;}
+		.box h3:after{
+			content:"";display: block;
+			width: 200px;height: 1px;
+			background: #000;
+			margin: 10px auto;
+
+			/*가운데 정렬
+			1. margin:0 auto;
+			2. poa left:50% margin-left:-100px;
+			3. poa left:50% transform:translateX(-50%);*/
+		}
+		.box .contents{margin: 0 auto;width: 1200px;}
+		.box p{margin-bottom: 30px;}
+		.box .contents li{
+			float: left;
+			background: skyblue;
+			width: 285px;height: 285px;
+			margin-right: 20px;
+			position: relative;
+		}
+		.box .contents li:last-child{margin-right: 0;}
+		.box .contents .overlay{
+			width: 100%;height: 100%;
+			background: rgba(0,255,0,0.3);
+			position: absolute;top: 0;
+			opacity: 0;
+			transition: 0.3s;
+		}
+		.box .contents .img{width: 100%;display: block;}
+		.box .contents .overlay .text{
+			width: 150px;height: 150px;
+			background: rgba(0,150,0,1);
+			color: #fff;text-align: center;
+			line-height: 150px;
+			position:absolute;left: 50%;top:50%;
+			transform: translate(-50%,-50%);
+			border-radius: 15px;
+		}
+
+		.box .contents li:hover .overlay{opacity: 1;}
+
+		.pink{
+			background-image: url(../images/pc01.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		.blue{
+			background-image: url(../images/pc02.jpg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+	<div class="box animated bounceInUp">
+		<h3 class="wow fadeInLeft" data-wow-delay="0.5s">GALLERY</h3>
+		<P class="wow fadeInRight" data-wow-delay="0.6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error!</P>
+		<div class="contents"> 
+			<ul class="clearfix">
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+<!-- 	<div style="height: 1000px;"></div> -->
+	<div class="box pink wow bounce">
+		<h3 class="wow fadeInLeft" data-wow-delay="0.5s">GALLERY</h3>
+		<P class="wow fadeInRight" data-wow-delay="0.6s">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error!</P>
+		<div class="contents"> 
+			<ul class="clearfix">
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li class="wow bounce" data-wow-delay="0.5s">
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<h3>GALLERY</h3>
+		<P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error!</P>
+		<div class="contents"> 
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+	<div class="box blue">
+		<h3>GALLERY</h3>
+		<P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, error!</P>
+		<div class="contents"> 
+			<ul class="clearfix">
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+				<li>
+					<img src="../images/testimg.jpg" alt="" class="img">
+					<div class="overlay">
+						<div class="text">Lorem.</div>
+					</div>
+				</li>
+			
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
