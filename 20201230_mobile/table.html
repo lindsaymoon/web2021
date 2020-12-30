@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>table</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		table{
+			border: 1px solid #000;
+			border-collapse:collapse;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		td{
+			border: 1px solid #000;
+			width: 25%;
+			text-align: center;
+			height: 100px;
+			/*vertical-align:bottom;*/ /*middle bottom*/
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Lorem.<br>hello</td>
+			<td>Voluptates.</td>
+			<td>Repudiandae.</td>
+			<td>Libero.</td>
+		</tr>
+	</table>
+	<style>
+		ul.box{margin-bottom:10px;}
+		ul.box>li{
+			float: left;width: 25%;
+			border: 1px solid #000;
+			height: 100px;
+			border-right:0 none;
+			text-align: center;
+			line-height:100px;
+		}
+		ul.box>li:last-child{border-right: 1px solid #000;}
+
+	</style>
+	
+	<ul class="box clearfix">
+		<li>Lorem. <!-- <br>hellow --></li>
+		<li>Est.</li>
+		<li>Maxime.</li>
+		<li>Dolore.</li>
+	</ul>
+	<style>
+		ul.box1{
+			display: table;
+			width: 100%;
+			_border: 1px solid #000;
+		}
+		ul.box1>li{
+			display: table-cell;
+			border: 1px solid #000;
+			border-right: 0 none ;
+			width: 25%;height: 100px;
+			text-align: center;
+			vertical-align: middle
+
+		}
+		ul.box1>li:last-child{
+			border-right: 1px solid #000;
+		}
+
+	</style>
+
+	<ul class="box1">
+		<li>Lorem. <br>ddddd</li>
+		<li>Exercitationem.</li>
+		<li>Culpa.</li>
+		<li>Voluptatum.</li>
+	</ul>
+</body>
+</html>
