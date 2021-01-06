@@ -6,10 +6,25 @@
 	<title>array</title>
 </head>
 <body>
+	<div id="han"></div>
 	<script>
-		var num = 1; //new Number(1);
-		var str = "han"; //new String("han");
-		var city = ["seoul","busan","incheon"];
+		// var num = 1; //new Number(1);
+		// var str = "han"; //new String("han");
+		var city = ["seoul","busan","incheon","suwon"];
+
+		function printArr(){
+			// var txt = "";
+				for(var i=0;i<city.length;i++){
+					// document.write(i)
+					document.write("배열데이터[" + i + "]는 " + city[i] + "<br>");
+
+					// txt += "배열데이터[" + i + "]는 " + city[i] + "<br>";
+					// console.log(txt);
+				}
+				// document.getElementById("han").innerHTML = txt;
+		}
+		// printArr();
 	</script>
+	<div onclick="printArr()">데이터출력</div>
 </body>
 </html>
