@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dom</title>
+</head>
+<body>
+	<button onclick="change()">클릭</button>
+	<button onclick="">원래상태</button>
+	<p>
+		Lorem ipsum dolor, sit <span>amet</span>, consectetur adipisicing elit. Ipsam, et iste perferendis pariatur <span>dolorum</span> dicta recusandae quibusdam inventore, omnis nihil aliquid sed vero eos quaerat sunt laboriosam aliquam <span>architecto</span> vel?
+	</p>
+	<script>
+		function change(){
+			var sp = document.getElementsByTagName("span");
+			// sp[0].style.color = "red";
+			// sp[1].style.color = "red";
+			// sp[2].style.color = "red";
+			// sp[3].style.color = "red";
+			// sp[4].style.color = "red";
+
+			for(var i=0;i<sp.length;i++){
+				sp[i].style.color = "orchid";
+				sp[i].style.fontWeight = "bold";
+			}
+		}
+
+		function init(){
+			var sp = document.getElementsByTagName("span");
+			for(var i=0;i<sp.length;i++){
+				sp[i].style.color = "initial";
+				sp[i].style.fontWeight = "initial";
+			}
+		}
+	</script>
+	<style>
+		.boxWrap{color: red;}
+		.box{color: initial;}
+	</style>
+
+	<div class="boxWrap">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam modi qui nam sed praesentium voluptatibus maxime. Temporibus aut qui quis.</p>
+		<div class="box">
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam unde, id esse consequatur hic minima quod distinctio modi maiores explicabo?
+		</div>
+	</div>
+</body>
+</html>

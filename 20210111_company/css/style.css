@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+
+header#main_header{}
+
+/*header top*/
+#header_top{
+	width: 1260px;background: pink;
+	position: fixed;left: 50%;transform: translateX(-50%);
+	top: 40px;z-index: 1;
+}
+
+#header_top>h1{float: left;background: red;height: 50px;}
+#main_menu{float: right;}
+#main_menu li{float: left;height: 50px;}
+#main_menu li a{display: block;line-height: 50px;padding: 0 30px;}
+.toggleMenu{display: none;}
+
+/*slider*/
+.sliderWrap{height: 1005px;}
+.sliderWrap li{
+	height: 1005px;background: skyblue;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.sliderWrap li.slider_1st{
+	background-image: url(../images/mainimg01.jpg);
+}
+.sliderWrap li.slider_2st{
+	background-image: url(../images/mainimg02.jpg);
+}
+.sliderWrap .slider_txt{
+	position: absolute;width: 500px;left: 50%;margin-left: -250px;
+	text-align: center;color: white;top: 30%;
+}
+.sliderWrap .slider_txt h3{font-size: 2em;}
+.sliderWrap .slider_txt h3:after{
+	content: "";display: block;width: 300px;height: 2px;background: #fff;margin: 10px auto;
+}
+.sliderWrap .bx-wrapper{
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border:0 none;
+	margin-bottom: 0;
+}
+.sliderWrap .bx-wrapper .bx-pager{
+	bottom: 100px;
+}
+
+
+/*content*/
+.content{width: 1260px;margin: 0 auto;}
+.content>ul>li{
+	float: left;width: 25%;height: 315px;
+}
+.content>ul>li a{color: white;}
+/*.content>ul>li:nth-child(2n){background: skyblue;}*/
+
+/*content layout*/
+.content>ul>li.ct1st{background: #92c1d5;}
+.content>ul>li.ct2st{}
+.content>ul>li.ct3st{width: 50%;}
+.content>ul>li.ct4st{background: #b8307c;}
+.content>ul>li.ct5st{background: #413d3e;}
+.content>ul>li.ct6st{width: 50%;}
+.content>ul>li.ct7st{height: 630px;}
+.content>ul>li.ct8st{width: 50%;}
+.content>ul>li.ct9st{background: #b8307c;}
+.content>ul>li.ct10st{background: #413d3e;}
+.content>ul>li.ct11st{}
+
+
+/*content cell*/
+
+.content li.ct1st a,
+.content li.ct4st a,
+.content li.ct5st a,
+.content li.ct9st a,
+.content li.ct10st a
+{text-align: center;display: block;height: 100%;padding-top: 85px;}
+
+
+.content li.ct1st img,
+.content li.ct4st img,
+.content li.ct5st img,
+.content li.ct9st img,
+.content li.ct10st img
+{display: block;margin: 0 auto;margin-bottom: 5px;}
+
+.content li.ct1st p{color: white;}
