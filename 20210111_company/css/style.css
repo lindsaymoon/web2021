@@ -5,21 +5,21 @@ header#main_header{}
 
 /*header top*/
 #header_top{
-	width: 1260px;background: pink;
+	width: 1260px;_background: pink;
 	position: fixed;left: 50%;transform: translateX(-50%);
 	top: 40px;z-index: 1;
 }
 
-#header_top>h1{float: left;background: red;height: 50px;}
+#header_top>h1{float: left;_background: red;height: 50px;color: #fff;padding-left: 20px;}
 #main_menu{float: right;}
 #main_menu li{float: left;height: 50px;}
-#main_menu li a{display: block;line-height: 50px;padding: 0 30px;}
+#main_menu li a{display: block;line-height: 50px;padding: 0 30px;color: #fff;}
 .toggleMenu{display: none;}
 
 /*slider*/
 .sliderWrap{height: 1005px;}
 .sliderWrap li{
-	height: 1005px;background: skyblue;
+	height: 1005px;_background: skyblue;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -47,15 +47,22 @@ header#main_header{}
 .sliderWrap .bx-wrapper .bx-pager{
 	bottom: 100px;
 }
+.sliderWrap .nextBtn,.prevBtn{
+	position: absolute;top: 55%;margin-top:-50px;cursor: pointer;
+}
 
+.sliderWrap .nextBtn{right: 0;}
 
 /*content*/
 .content{width: 1260px;margin: 0 auto;}
 .content>ul>li{
-	float: left;width: 25%;height: 315px;
+	float: left;width: 25%;height: 315px;position: relative;
+	overflow: hidden;
 }
 .content>ul>li a{color: white;}
 /*.content>ul>li:nth-child(2n){background: skyblue;}*/
+
+
 
 /*content layout*/
 .content>ul>li.ct1st{background: #92c1d5;}
@@ -68,18 +75,16 @@ header#main_header{}
 .content>ul>li.ct8st{width: 50%;}
 .content>ul>li.ct9st{background: #b8307c;}
 .content>ul>li.ct10st{background: #413d3e;}
-.content>ul>li.ct11st{}
+.content>ul>li.ct11st{width: 50%;}
 
 
 /*content cell*/
-
 .content li.ct1st a,
 .content li.ct4st a,
 .content li.ct5st a,
 .content li.ct9st a,
 .content li.ct10st a
 {text-align: center;display: block;height: 100%;padding-top: 85px;}
-
 
 .content li.ct1st img,
 .content li.ct4st img,
@@ -88,4 +93,49 @@ header#main_header{}
 .content li.ct10st img
 {display: block;margin: 0 auto;margin-bottom: 5px;}
 
-.content li.ct1st p{color: white;}
+
+/*content txt*/
+.content div.txt{position: absolute;top: 40px;left: 40px;}
+.content div.txt h3:after{
+	content: "";display: block;width: 50px;height: 2px;
+	background-color: #fff;margin: 20px 0;
+}
+.content div.txt p{font-size: 2em;}
+
+
+/*modal layer*/
+.content .ct2st .bgImg{transition: 0.3s;}
+.content .ct2st:hover .bgImg{transform: scale(1.2);}
+.content .ct2st .play{
+	position: absolute;left: 50%;top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+/*news slider*/
+.content .ct3st{}
+.content .ct3st h2{position: absolute;top: 40px;left: 40px;}
+.content .sliderWrap{width: 630px;height: 315px;}
+.content .sliderWrap li.news{width: 630px;height: 315px;}
+.content .sliderWrap .left{
+	float: left;width: 315px;height: 315px;padding:80px 40px;
+	box-sizing: border-box;position: relative;
+}
+.content .sliderWrap .left:after{
+	content: "";display: block;
+	border-width: 30px;
+	border-style:solid;
+	border-color:transparent transparent transparent white;
+	_background: red;
+	position: absolute;
+	top: 50%;transform: translateY(-50%);
+	right:-60px;
+}
+.content .sliderWrap .right{float: right;width: 315px;height: 315px;}
+.content .ct3st .btn{position: absolute;bottom: 20px;left: 213px;width: 76px;}
+.content .ct3st .btn img{width: 38px;height: 38px;float: left;border: 1px solid #ccc;}
+
+.content .ct3st .nextBtn,.prevBtn{
+	position: absolute;top: 55%;margin-top:-50px;cursor: pointer;
+}
+.content .ct3st .nextBtn{right: 0;}
