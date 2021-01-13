@@ -129,7 +129,7 @@ header#main_header{}
 	_background: red;
 	position: absolute;
 	top: 50%;transform: translateY(-50%);
-	right:-60px;
+	right:-59px;
 }
 .content .sliderWrap .right{float: right;width: 315px;height: 315px;}
 .content .ct3st .btn{position: absolute;bottom: 20px;left: 213px;width: 76px;}
