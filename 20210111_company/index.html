@@ -20,10 +20,19 @@
 			$(".prevBtn").click(function(){
 					myslider.goToPrevSlide();
 			});
+
+
 			var slider = $(".slider1st").bxSlider({
 				controls:false,
 				pager:false
 			});
+			$(".nextBtn").click(function(){
+					slider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+					slider.goToPrevSlide();
+			});
+
 
 			$(".toggleMenu").click(function(){
 				var toggle = $(".toggleMenu").attr("class");
@@ -41,14 +50,6 @@
 				$(".toggleMenu").removeClass("change");
 				$("#main_menu").removeAttr("style");
 			});
-
-
-			$(".nextBtn").click(function(){
-					slider.goToNextSlide();
-			});
-			$(".prevBtn").click(function(){
-					slider.goToPrevSlide();
-			});
 		});
 	</script>
 </head>
@@ -58,12 +59,30 @@
 			<h1 class="logo"><a href="#">LOGO</a></h1>
 			<nav id="main_menu">
 				<ul class="clearfix">
-					<li><a href="#">회사소개</a></li>
-					<li><a href="#">윤리경영</a></li>
-					<li><a href="#">제품/기술</a></li>
-					<li><a href="#">지속가능성</a></li>
-					<li><a href="#">홍보채널</a></li>
-					<li><a href="#">인재채용</a></li>
+					<li>
+						<a href="#">회사소개</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">윤리경영</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">제품/기술</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">지속가능성</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">홍보채널</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">인재채용</a>
+						<div class="bar"></div>
+					</li>
 				</ul>
 			</nav>
 			<div class="toggleMenu">
@@ -289,8 +308,35 @@
 					</div>
 				</a>
 			</li>
-			
 		</ul>	
+	</div>
+	<div class="third_cont">
+		<ul class="clearfix">
+			<li class="tcont1">
+				<img src="images/gathering.gif" alt="">
+				<div class="title">
+					<h3>공익활동가들의 놀이터</h3>
+					<p>동북권 공익활동가의 성장을 토대로<br>새로운 공공성을 창출합니다.</p>
+				</div>
+				<a href="#">
+					<div class="detail">
+						<p>자세히보기</p>
+					</div>
+				</a>
+			</li>
+			<li class="tcont2">
+				<img src="images/wtogather.gif" alt="">
+				<div class="title">
+					<h3>시민사회 활성화</h3>
+					<p>시민공익활동을 촉진하고<br>지역사회 혁신과 <br>상생을 실현합니다.</p>
+				</div>
+				<a href="#">
+					<div class="detail">
+						<p>자세히보기</p>
+					</div>
+				</a>	
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
