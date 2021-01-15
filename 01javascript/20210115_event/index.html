@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>event</title>
+	<style>
+		
+		html,body{height: 100%;}
+	</style>
+</head>
+<body>
+	<script>
+		// var han = document.getElementById("han");
+		// han.innerHTML = "반갑습니다."
+		function calculate(){
+			var exp = document.getElementById("exp");
+			var result = document.getElementById("result");
+			console.log(eval(exp.value));
+			result.value = eval(exp.value);
+		}
+
+	</script>
+	<h3 id="han">안녕하세요</h3>
+
+	<form>
+		<label for="exp">식 : </label>
+		<input type="text" id="exp" value="" name="cal">
+		<input type="text" id="result">
+		<input type="button" value="계산" onclick="calculate()">
+	</form>
+	<div id="txt">홍길동</div>
+	<img src="../../images/testimg.jpg" alt="">
+	<script>
+		// var allBody = document.getElementByTagName("body")[0];
+		// allBody.onwheel = function(){};
+		var width = 1;
+		document.body.onwheel = function(e){
+			console.log(e.wheelDelta);
+
+			if(e.wheelDelta<0){
+				width--; //width = width - 1;
+				if(width<1){width=1;}
+			}else{
+				width++; //width = width + 1;
+				if(width>20){width=20;}
+			}
+			console.log(width);
+
+			document.getElementById("txt").style.fontSize = width + "em";
+			document.getElementByTagName("img")[0].style.width = (width + 100)
+		}
+		console.log("홍길동")
+	</script>
+</body>
+</html>

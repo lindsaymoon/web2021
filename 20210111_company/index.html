@@ -24,6 +24,25 @@
 				controls:false,
 				pager:false
 			});
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class");
+				console.log(toggle);
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
+
+
 			$(".nextBtn").click(function(){
 					slider.goToNextSlide();
 			});
@@ -187,5 +206,50 @@
 			</ul>
 		</div>
 	</header>
+	<div class="container">
+		<div class="section">
+			<h4>비전</h4>
+			<p>VISION 2021</p>
+
+			<ul class="clearfix">
+				<li>
+					<duv class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Numquam, ipsa.</p>
+						</div>
+					</duv>
+				</li>
+				<li>
+					<duv class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Numquam, ipsa.</p>
+						</div>
+					</duv>
+				</li>
+				<li>
+					<duv class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Numquam, ipsa.</p>
+						</div>
+					</duv>
+				</li>
+				<li>
+					<duv class="card">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>Engineering</h3>
+							<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Numquam, ipsa.</p>
+						</div>
+					</duv>
+				</li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

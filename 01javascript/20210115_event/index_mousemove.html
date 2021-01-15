@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mousemove</title>
+	<script>
+		window.onload = function(){
+			document.getElementById("div").innerHTML = "홍길동";
+		}
+		// $(document).ready(function(){
+		// 	$("#div").html("문경현");
+		// });
+	</script>
+</head>
+<body>
+	<img src="../../images/testimg.jpg" onmousemove="where(event)">
+	<div id="div"></div>
+	<script>
+		function where(e){
+			var txt = "버튼 = " + e.button + "<br>";
+			txt += "이미지안좌표 offset = x : " + e.offsetX +", y : " + e.offsetY + "<br>";
+			document.getElementById("div").innerHTML = txt;
+
+		}
+	</script>
+</body>
+</html>

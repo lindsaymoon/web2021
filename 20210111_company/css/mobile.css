@@ -1,0 +1,163 @@
+@charset "utf-8";
+html,body{height: 100%;}
+header#main_header{}
+
+/*header top*/
+#header_top{
+	width: 100%;
+	position: fixed;
+	top:0;z-index:99999;
+	background: white;
+}
+
+#header_top>h1{float: left;height: 50px;margin-left: 10px;line-height: 50px;}
+
+#main_menu{
+	background: yellow;position: fixed;top: 0;left: -100%;
+	width: 100%;height: 100%;
+}
+#main_menu ul{
+	background: white;position: absolute;
+	top: 50%;transform: translateY(-50%);
+	width: 100%;
+}
+#main_menu li{float: none;height: 50px;}
+#main_menu li a{display: block;line-height:50px;text-align: center;}
+
+.toggleMenu{
+	display: block;position: absolute;top: 5px;right: 10px;
+	width: 40px;height: 40px;_background-color: pink;
+	cursor: pointer;
+}
+.toggleMenu div{
+	width: 25px;height: 4px;background: orange;
+	border-radius: 2px;position: absolute;left: 7.5px;
+}
+.toggleMenu .bar1{top: 10px;}
+.toggleMenu .bar2{top: 18px;}
+.toggleMenu .bar3{bottom: 10px;}
+
+.toggleMenu.change .bar1{transform: rotate(45deg);top: 18px;background: orange;}
+.toggleMenu.change .bar2{opacity: 0;}
+.toggleMenu.change .bar3{transform:rotate(-45deg);bottom: 18px;background: orange;}
+
+
+/*slier*/
+.sliderWrap{height: 400px;}
+.sliderWrap li{
+	height: 400px;_background:skyblue;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+.sliderWrap li.slider_1st{
+	background-image: url(../images/mainimg01.jpg);
+}
+.sliderWrap li.slider_2st{
+	background-image: url(../images/mainimg02.jpg);
+}
+
+
+.sliderWrap .slider_txt{
+	position: absolute;width: 500px;left:50%;margin-left:-250px;
+	text-align: center;color:white;top:50%;
+}
+.sliderWrap .slider_txt h3{font-size:1em;}
+.sliderWrap .slider_txt h3:after{content:"";display: none;}
+.sliderWrap .slider_txt p{display: none;}
+.sliderWrap .bx-wrapper {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0 none;
+    margin-bottom: 0;
+}
+.sliderWrap .bx-wrapper .bx-pager{
+	bottom:10px;
+}
+
+/*content*/
+.content{width: 100%;}
+.content>ul>li{
+	float: left;width: 25%;position: relative;
+	overflow: hidden;transition:0.3s;
+	height: 170px;
+}
+.content>ul>li a{color:white;}
+/*.content>ul>li:nth-child(2n){background:skyblue;}*/
+
+/*content layout*/
+.content li.ct1st{background: #92c1d5;width: 50%;}
+.content li.ct2st{width: 50%;}
+.content li.ct3st{display: none;}
+.content li.ct4st{background: #b8307c;width: 50%;}
+.content li.ct5st{background: #413d3e;width: 50%;}
+.content li.ct6st{display: none;width: 50%;}
+.content li.ct7st{display: none;height: 630px;}
+.content li.ct8st{display: none;width: 50%;}
+.content li.ct9st{display: none;background: #b8307c;}
+.content li.ct10st{display: none;background: #413d3e;}
+.content li.ct11st{display: none;width: 50%;}
+
+
+/*content icon cell*/
+
+.content li.ct1st a,
+.content li.ct4st a,
+.content li.ct5st a,
+.content li.ct9st a,
+.content li.ct10st a
+{text-align: center;display: block;height: 100%;padding:20px;}
+
+.content li.ct1st img,
+.content li.ct4st img,
+.content li.ct5st img,
+.content li.ct9st img,
+.content li.ct10st img
+{display: block;margin: 0 auto;margin-bottom:5px;}
+
+/*content txt*/
+.content div.txt{position: absolute;top: 40px;left: 40px;}
+.content div.txt h3:after{
+	content:"";display: block;width: 50px;height: 2px;
+	background-color: #fff;margin: 20px 0;
+}
+.content div.txt p{font-size:2em;}
+
+/*modal layer*/
+.content .ct2st .bgImg{transition:0.3s;width: 100%;}
+.content .ct2st:hover .bgImg{transform:scale(1.2);}
+.content .ct2st .play{
+	position: absolute;left: 50%;top: 50%;
+	transform:translate(-50%,-50%);
+}
+
+/*news slider*/
+
+.content .ct3st{}
+.content .ct3st h2{position: absolute;top:40px;left: 40px;}
+.content .sliderWrap{width: 630px;height:315px;}
+.content .sliderWrap li.news{width: 630px;height:315px;}
+.content .sliderWrap .left{
+	float: left;width: 315px;height: 315px;padding: 80px 40px;
+	position: relative;
+}
+.content .sliderWrap .left:after{
+	content:"";display: block;
+	border-width:30px;
+	border-style:solid;
+	border-color:transparent transparent transparent white;
+	position: absolute;
+	top:50%;transform:translateY(-50%);
+	right:-60px;
+}
+.content .sliderWrap .right{float: right;width: 315px;height: 315px;}
+.content .ct3st .btn{position: absolute;bottom: 20px;left: 213px;width: 76px;}
+.content .ct3st .btn img{width:38px;height: 38px;float: left;}
+
+
+/*continer*/
+.container{
+	display: none;
+}
