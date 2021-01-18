@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.submenu{display: none;}
+		nav.gnb{width: 1000px;margin: 0 auto;_background: skyblue;}
+		nav.gnb>ul>li{float: left;width: 20%;}
+		nav.gnb>ul>li a{display: block;text-align: center;line-height: 40px;font-weight: bold;}
+
+		nav.gnb>ul>li:hover{background: blue;}
+		nav.gnb>ul>li:hover a{color: white;}
+
+		/*nav.gnb>ul>li:nth-child(1) .submenu{display: block;})*/
+		.submenu{padding-bottom: 10px;}
+		.submenu a{display: block;text-align: center;line-height: 30px;}
+		.submenu li:hover{background: yellow;}
+
+		nav.gnb>ul>li:hover .submenu{display: block;}
+		/*nav.gnb>ul:hover .submenu{display: block;}*/ /*한번에 섭메뉴 다나옴.*/
+
+		.visual{height: 400px;background: pink;}
+		
+	</style>
+</head>
+<body>
+	<nav class="gnb">
+		<ul>
+			<li><a href="#">menu1</a>
+				<ul class="submenu">
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu2</a>
+				<ul class="submenu">
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu3</a>
+				<ul class="submenu">
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu4</a>
+				<ul class="submenu">
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+				</ul>
+			</li>
+			<li><a href="#">menu5</a>
+				<ul class="submenu">
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+					<li><a herf="#">smenu1</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="visual"></div>
+</body>
+</html>
