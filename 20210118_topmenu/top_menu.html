@@ -12,8 +12,9 @@
   <script src="../js/jquery.bxslider.js"></script>
   <script>
   $(document).ready(function(){
-    var slider = $(".visual").bxSlider();
+    $(".visual").bxSlider({
         auto:true
+      });
   });
   </script>
   <style>
@@ -69,10 +70,10 @@
     }
 
     .visualWrap {width: 100%;margin: 0 auto;}
-    .visual{width: 100%;}
+    .visual{}
     .bx-wrapper{box-shadow: none;border:none;}
 
-    .slider img {
+    .visual li img {
       display: block; width: 100%;
     }
 
@@ -116,7 +117,7 @@
       </li>
     </ul>
   </nav>
-  <div class="visualWrap clearfix">
+  <div class="visualWrap">
     <ul class="visual">
       <li> <img src="../images/pc01.jpg" alt=""></li>
       <li><img src="../images/pc02.jpg" alt=""></li>
