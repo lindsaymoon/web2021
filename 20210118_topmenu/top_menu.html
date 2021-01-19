@@ -7,15 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>top menu</title>
   <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
   <script src="../js/jquery-3.1.1.min.js"></script>
   <script src="../js/jquery.bxslider.js"></script>
   <script>
   $(document).ready(function(){
     var slider = $(".visual").bxSlider();
+        auto:true
   });
   </script>
   <style>
-    .submenu {display: none;}
+    .submenu {
+      display: none;
+    }
 
     nav.gnb {
       width: 1000px;
@@ -64,14 +68,14 @@
       display: block;
     }
 
-    .visual {
-      background: rgb(15, 100, 174);
-      height: 400px;
-    }
+    .visualWrap {width: 100%;margin: 0 auto;}
+    .visual{width: 100%;}
+    .bx-wrapper{box-shadow: none;border:none;}
 
     .slider img {
       display: block; width: 100%;
     }
+
   </style>
 </head>
 
@@ -112,9 +116,11 @@
       </li>
     </ul>
   </nav>
-  <div class="visual clearfix">
-      <img src="../images/pc01.jpg" alt="">
-      <img src="../images/pc02.jpg" alt="">
+  <div class="visualWrap clearfix">
+    <ul class="visual">
+      <li> <img src="../images/pc01.jpg" alt=""></li>
+      <li><img src="../images/pc02.jpg" alt=""></li>
+    </ul>
   </div>
 </body>
 
