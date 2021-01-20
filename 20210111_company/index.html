@@ -12,7 +12,8 @@
 	<script>
 		$(document).ready(function(){
 			var	myslider = $(".slider").bxSlider({
-				controls:false
+				controls:false,
+				auto:true
 			});
 			$(".nextBtn").click(function(){
 					myslider.goToNextSlide();
@@ -22,9 +23,10 @@
 			});
 
 
-			var slider = $(".slider1st").bxSlider({
+			var slider = $(".sliderTwo").bxSlider({
 				controls:false,
-				pager:false
+				pager:false,
+				auto:true
 			});
 			$(".nextBtn").click(function(){
 					slider.goToNextSlide();
@@ -56,7 +58,7 @@
 <body>
 	<header id="main_header">
 		<div id="header_top" class="clearfix">
-			<h1 class="logo"><a href="#">LOGO</a></h1>
+			<h1 class="logo"><a href="#">NPO 지원센터</a></h1>
 			<nav id="main_menu">
 				<ul class="clearfix">
 					<li>
@@ -94,14 +96,14 @@
 		<div class="sliderWrap">
 			<ul class="slider">
 				<li class="slider_1st">
-					<!-- <img src="images/mainimg01.jpg"> -->
+					<!-- <img src="images/bslider03.jpeg"> -->
 					<div class="slider_txt">
 						<h3>We Build The World</h3>
 						<p>고객을 위해 가장 빠르고 신속한 최신의 솔루션을 제시해드립니다.<br>고객감동을 위해 최선을 다하겠습니다.</p>
 					</div>
 				</li>
 				<li class="slider_2st">
-					<!-- <img src="images/mainimg02.jpg"> -->
+					<!-- <img src="images/bslider01.jpeg"> -->
 					<div class="slider_txt">
 						<h3>We Build The World.</h3>
 						<p>고객을 위해 가장 빠르고 신속한 최신의 솔루션을 제시해드립니다.<br>고객감동을 위해 최선을 다하겠습니다.</p>
@@ -137,7 +139,7 @@
 				<li class="ct3st">
 
 					<div class="sliderWrap">
-						<ul class="slider1st">
+						<ul class="sliderTwo">
 							<li class="news clearfix">
 								<div class="left">초중생에 장학금<br>6억 4천만원 지원 및 초청행사<br>진행...</div>
 								<div class="right">
@@ -177,11 +179,14 @@
 					</a>
 				</li>
 				<li class="ct6st">
+					
 					<a href="#">
 					<img src="images/longimg03.jpg" alt="빛과 에너지">
-					<div class="txt">
-						<h3>전력 및 에너지 플랜트</h3>
-						<p>세상을 밝히는<br>빛과 에너지</p>
+					<div class="hbox">
+						<div class="txt">
+							<h3>전력 및 에너지 플랜트</h3>
+							<p>세상을 밝히는<br>빛과 에너지</p>
+						</div>
 					</div>
 					</a>
 				</li>
@@ -197,9 +202,11 @@
 				<li class="ct8st">
 					<a href="#">
 					<img src="images/longimg08.png" alt="빛과 에너지">
-					<div class="txt">
-						<h3>정유</h3>
-						<p>핵심 설계기술과<br>우수한 전문인력 확보</p>
+					<div class="hbox">
+						<div class="txt">
+							<h3>정유</h3>
+							<p>핵심 설계기술과<br>우수한 전문인력 확보</p>
+						</div>
 					</div>
 					</a>
 				</li>
@@ -216,9 +223,11 @@
 				<li class="ct11st">
 					<a href="#">
 					<img src="images/longimg09.jpeg" alt="빛과 에너지">
-					<div class="txt">
-						<h3>인프라 및 환경</h3>
-						<p>인간 중심의 인프라 및<br>환경사업 전계</p>
+					<div class="hbox">
+						<div class="txt">
+							<h3>인프라 및 환경</h3>
+							<p>인간 중심의 인프라 및<br>환경사업 전계</p>
+						</div>
 					</div>
 					</a>
 				</li>
@@ -272,9 +281,11 @@
 	</div>
 	<div class="second_cont">
 		<ul class="clearfix">
+
 			<li class="cont01">
 				<a href="#">
 					<img src="images/main_book.jpg" alt="아카이브">
+
 					<div>
 						<h3>아카이브</h3>
 						<p>아카이브 속<br>필요한 자료를<br>찾아보세요!</p>
@@ -284,6 +295,7 @@
 			<li class="cont02">
 				<a href="#">
 					<img src="images/img_project_04.png" alt="공간대여">
+
 					<div class="down">
 						<h3>공간대여</h3>
 						<p>동북권 공익활동<br>활성화를 위해<br>공간과 자원을<br>제공합니다.</p>
@@ -338,5 +350,17 @@
 			</li>
 		</ul>
 	</div>
+	<div class="line"></div>
+	<footer id="footer">
+		<img src="images/logo.png" alt="로고">
+
+		<ul class="clearfix">
+			<a href="#"><li>이용약관</li></a>
+			<a href="#"><li>개인정보처리방침</li></a>
+		</ul>
+		<div>
+			<p>01411 서울시 도봉구 마들로13길 84 창동 아우르네 2층<br>Tel : 02-906-2018  /  Fax : 02-906-2019  /  E-mail : info@dbnpo.kr<br>© Copyright 2019 Seoul Northeastern NPO Center. All rights reserved.</p>
+		</div>
+	</footer id="footer">
 </body>
 </html>
