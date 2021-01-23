@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>subpage</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var	myslider = $(".slider").bxSlider({
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$(".nextBtn").click(function(){
+					myslider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+					myslider.goToPrevSlide();
+			});
+
+
+			var slider = $(".sliderTwo").bxSlider({
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$(".nextBtn").click(function(){
+					slider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+					slider.goToPrevSlide();
+			});
+
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class");
+				console.log(toggle);
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="sub_header">
+		<div id="header_top" class="clearfix">
+			<h1 class="logo"><a href="#">NPO 지원센터</a></h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li>
+						<a href="#">센터소개</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">센터소식</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">NPO정보</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">공간대관</a>
+						<div class="bar"></div>
+					</li>
+				</ul>
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		<div class="subsliderWrap">
+			<ul class="slider">
+				<li class="subslider_1st">
+					<!-- <img src="images/bslider03.jpeg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+				<li class="subslider_2st">
+					<!-- <img src="images/bslider01.jpeg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+				<li class="subslider_3st">
+					<!-- <img src="images/mainimg01.jpg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+			</ul>
+			<div class="btn clearfix">
+				<img src="images/main_prev.png" alt="" class="prevBtn">
+				<img src="images/main_next.png" alt="" class="nextBtn">
+			</div>
+		</div>
+		<div class="subnav">
+			<ul>
+				<li><a href="#">기관소개</a></li>
+				<li><a href="#">CI소개</a></li>
+				<li><a href="#">일하는 사람들</a></li>
+				<li><a href="#">찾아오시는 길</a></li>
+			</ul>
+		</div>
+		<div class="movingPage">
+			<ul class="clearfix">
+				<li>홈<span class="one">></span></li>
+				<li><a href="#">센터소개</a><span class="two">></span></li>
+				<li><a href="#">기관소개</a></li>
+			</ul>
+		</div>
+</body>
+</html>
