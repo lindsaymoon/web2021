@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$.ajax({
+				url:'book.xml',
+				dataType:'xml',
+				success:function(data){
+					// $(data).find("book").each(function(){});
+					$(data).find("book").each(function(){
+						var txt = "";
+						var title = $("title",this).text();
+						var author = $("author",this).text();
+						var img = $("bookimg",this).text();
+						var href = $("href",this).text();
+
+						txt += "<li>";
+						txt += "<a href='" + href + "'><img src='images/" + img + "'></a>";
+						txt += "<div>" + title + "</div>";
+						txt += "<div>" + author + "</div>";
+						txt += "</li>";
+
+						$(".han").append(txt);
+					});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+
+	</div>
+</body>
+</html>
