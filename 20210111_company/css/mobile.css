@@ -207,10 +207,10 @@ header#main_header{}
 .second_cont div p{display: none;}
 
 
-.second_cont .cont01 img{width: 242.5px;height: 242.5px;}
-.second_cont .cont02 img{width: 242.5px;}
-.second_cont .cont03 img{width: 242.5px;}
-.second_cont .cont04 img{width: 242.5px;}
+.second_cont .cont01 img{width: 242.5px;height: 242.5px;display: block;}
+.second_cont .cont02 img{width: 242.5px;display: block;}
+.second_cont .cont03 img{width: 242.5px;display: block;}
+.second_cont .cont04 img{width: 242.5px;display: block;}
 
 
 
