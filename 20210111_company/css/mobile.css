@@ -13,7 +13,7 @@ header#main_header{}
 #header_top>h1{float: left;height: 50px;margin-left: 10px;line-height: 50px;}
 
 #main_menu{
-	background: yellow;position: fixed;top: 0;left: -100%;
+	background: powderblue;position: fixed;top: 0;left: -100%;
 	width: 100%;height: 100%;
 }
 #main_menu ul{
@@ -30,16 +30,16 @@ header#main_header{}
 	cursor: pointer;
 }
 .toggleMenu div{
-	width: 25px;height: 4px;background: orange;
+	width: 25px;height: 4px;background: #333;
 	border-radius: 2px;position: absolute;left: 7.5px;
 }
 .toggleMenu .bar1{top: 10px;}
 .toggleMenu .bar2{top: 18px;}
 .toggleMenu .bar3{bottom: 10px;}
 
-.toggleMenu.change .bar1{transform: rotate(45deg);top: 18px;background: orange;}
+.toggleMenu.change .bar1{transform: rotate(45deg);top: 18px;background: #333;}
 .toggleMenu.change .bar2{opacity: 0;}
-.toggleMenu.change .bar3{transform:rotate(-45deg);bottom: 18px;background: orange;}
+.toggleMenu.change .bar3{transform:rotate(-45deg);bottom: 18px;background: #333;}
 
 
 /*slier*/
