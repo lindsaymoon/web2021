@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>:::company:::</title>
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery.3.4.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		:root{
+			--primary-color1:#4458cc;
+			--primary-color2:#854fee;
+			--text-color:#777;
+			--border-color: #20f1f1;
+			--gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+			--shadow-color:0px 10px 30px rgba(118,85,225,0.3);
+			--box-shadow: 0px 10px 20px rgba(57,56,61,0.3);
+		}
+		.headerWrap .nav-item{font-size: 1.2em; border-bottom: 4px solid transparent;transition: 0.3s;}
+		.headerWrap .nav-item:hover{border-bottom: 4px solid var(--primary-color2);}
+
+		.visualWrap{
+			background: url(assets/slider-bg.svg) no-repeat center;
+			background-size: cover;
+		}
+
+		.button.primary-button{box-shadow: var(--box-shadow);background: var(--gradient-color);color: white;}
+		.button.secondary-button{box-shadow: var(--box-shadow);}
+	</style>
+</head>
+<body>
+	<!-- headerWrap start -->
+	<div class="headerWrap">
+		<div class="container pl-0 pr-0">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a href="#" class="navbar-brand">
+					<img src="assets/logo.svg" alt="" class="img-fluid">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a href="#!" class="nav-link">HOME</a>
+						</li>
+						<li class="nav-item">
+							<a href="#!" class="nav-link">ABOUT</a>
+						</li>
+						<li class="nav-item">
+							<a href="#!" class="nav-link">SERVICE</a>
+						</li>
+						<li class="nav-item">
+							<a href="#!" class="nav-link">COMMUNITY</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- headerWrap end -->
+
+<!-- visualWrap start -->
+	<div class="visualWrap">
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-md-6 col-lg-4 align-self-centerb mb-4 mb-md-0">
+					<h2 class="text-center text-md-left">Lorem ipsum dolor sit.</h2>
+					<p class="mb-3 text-center text-md-left">Lorem ipsum dolor sit amet, consectetur.</p>
+					<a href="#!" class="btn button primary-button px-4 d-block d-md-inline-block mb-3 mb-md-0">MORE</a>
+					<a href="#!" class="btn button secondary-button btn-outline-primary px-4 d-block d-md-inline-block">EMAIL</a>
+				</div>
+				<div class="col-md-6 col-lg-8 text-center">
+					<img src="assets/slider.svg" alt="" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- visualWrap end -->
+</body>
+</html>
