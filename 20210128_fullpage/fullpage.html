@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fullpage</title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+  <style>
+    nav#navTop{
+      position: fixed;background: white;
+      width: 100%;padding-left: 10px;z-index:1
+    }
+    nav#navTop li{float: left;}
+    nav#navTop li a{
+      display: block;line-height:23px;text-align: center;
+      padding: 0 10px;color: #7C7575;
+    }
+    nav#navTop li.active{background-color:powderblue;}
+    nav#navTop li.active a{color:white}
+
+    .section{
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+    .section.page1{background: #ebebeb;}
+    .section.page2{background: #d7d7d7;}
+    .section.page3{background: #ebebeb;}
+    .section.page4{background: #d7d7d7;text-align: center;}
+
+    .main{
+      width: 400px;position: absolute;top:50%;
+      transform:translateY(-50%)
+    }
+
+    .main.one,.main.three{
+      left:200px;
+    }
+
+    .main.two{
+      right:200px;
+    }
+
+    .main h3{font-size:3em;}
+    #first{left: -400px;transition:0.3s;}
+    #first.move{left: 250px;}
+    .main2 a{
+    	float: right;display: block;
+	    text-align: center;width: 150px;
+	    background: #464646;line-height:40px;
+	    border-radius: 30px;
+	    color:white;transition:0.3s;
+    }
+    .main2 p{float: right;display: block;}
+    .main2 a:hover{background-color: #fff;color:#000}
+
+    #onView2st{right:-500px;transition:0.3s;width: 470px;}
+    #onView2st.move{right: 300px;}
+
+
+    #onView3st{left:-400px;transition:0.3s}
+    #onView3st.move{left: 250px;}
+
+
+    .title{
+    	position: absolute;font-size: 2em;
+    	left: 50%;top: 18%;
+    	transform: translate(-50%,-50%);}
+    .product{
+    	width: 140px;height: 419px;
+    	position: absolute;
+    	left: 50%;top: 57%;transform: translate(-50%,-50%);}
+    
+
+	.section.page2 .sideword{transform: rotate(90deg);position: absolute;top: 130px;left: 30px;}
+    .section.page2 .person{width: 540px;height: 531px;position: absolute;top: 100px;left: 250px;}
+    .section.page2 h3{margin-bottom: 50px;}
+    .section.page2 .main.two{position: absolute;top: 350px;}
+    .section.page2 .scroll{left: 500px;}
+
+
+	.section.page3 h3{margin-bottom: 50px;}
+	.section.page3 .line1{margin-bottom: 40px;}
+	.section.page3 .bath{width: 580px;height: 873px;position: absolute;right: 250px;top: -200px;}
+	.section.page3 .scroll{left:1380px;}
+
+
+	.section.page4 h1{margin-top: -200px;margin-bottom: 50px;font-size: 3em;}
+	.section.page4 p{}
+	.section.page4 .alist{margin-left: 600px;}
+    .section.page4 .alist a{float: left;line-height: 40px;padding-right:30px;position: relative;bottom: -370px;}
+
+
+    .scroll{
+      position: absolute;bottom: 20px;left: 50%;transform:translateX(-50%);
+      animation-name:xScroll;
+      animation-duration:0.8s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes xScroll {
+      from{bottom:20px}
+      to{bottom: 40px;}
+    }
+
+  </style>
+  <script>
+    $(function(){
+      $("#fullpage").fullpage({
+        menu:"#topMenu", //메뉴지정
+        anchors:["m1st","m2st","m3st","m4st"],
+        navigation:false,
+        afterLoad:function(anchorslink,index){
+          console.log(anchorslink+','+index);
+
+          if(index == 1){
+            $("#first").addClass("move");
+          }else{
+            $("#first").removeClass("move")
+          }
+
+          if(index == 2){
+            $("#onView2st").addClass("move");
+          }else{
+            $("#onView2st").removeClass("move")
+          }
+
+          if(index == 3){
+            $("#onView3st").addClass("move");
+          }else{
+            $("#onView3st").removeClass("move")
+          }
+
+        }
+      });
+    });
+  </script>
+
+</head>
+<body>
+  <nav id="navTop">
+    <ul class="clearfix" id="topMenu">
+      <li data-menuanchor="m1st"><a href="#m1st">curology</a></li>
+      <li data-menuanchor="m2st"><a href="#m2st">skin care</a></li>
+      <li data-menuanchor="m3st"><a href="#m3st">solutions </a></li>
+      <li data-menuanchor="m4st"><a href="#m4st">service</a></li>
+    </ul>
+  </nav>
+  <div id="fullpage">
+    <!-- section 1st -->
+    <div class="section page1" data-anchor="m1st">
+    	<p class="title">curology</p>
+      	<div class="main one" id="first">
+        	<h3>A better way<br>is coming.</h3>
+      	</div>
+      	<img src="images/product.png" alt="" class="product">
+      	<div class="main2">
+			<a href="#">register now</a>
+      		<p>Get a powerful custom cream mixed just for you.</p>
+      	</div>
+    </div>
+
+    <!-- section 2st -->
+    <div class="section page2" data-anchor="m2st">
+    	<p class="sideword">results may vary</p>
+    	<img src="images/person.jpg" alt="" class="person">
+	    <div class="main two" id="onView2st">
+	    	<h3>Real providers take<br>your skin personally</h3>
+	    	<p>Forget “custom” algorithms. You’re matched with a<br>Curology provider who gets to know your skin. They’ll<br>ask questions, check your progress, and stick by you.</p>
+	    	<a href="#">read more</a>
+	    </div>
+	    <div class="scroll">
+	    	<a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+	    </div>
+    </div>
+
+    <!-- section 3st -->
+    <div class="section page3" data-anchor="m3st">
+    	<img src="images/bath.jpg" alt="" class="bath">
+      <div class="main three" id="onView3st">
+        <h3>Custom solutions<br>for your skin’s<br>unique needs</h3>
+        <p class="line1">Big zits? Clogged pores? Occasional breakouts?<br>Lose the one-size-fits-all drugstore stuff.</p>
+        <p>Your custom formula mixes ingredients<br>you can’t get off the shelf — and has<br>your name on the label.</p>
+      </div>
+      <div class="scroll">
+	    	<a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
+	    </div>
+    </div>
+
+    <!-- section 4st -->
+    <div class="section page4" data-anchor="m4st">
+      <div class="slide">
+      	<h1>We’re here for your skin’s full journey</h1>
+      	<p>It’s easy as uploading a no-makeup selfie, and in just a few<br>days you have a customized cream delivered right to<br>your door. It’s the solution to all your sucky skin problems.</p>
+      	<div class="alist">
+	  		<a href="#">Terms of Service</a>
+	  		<a href="#">Privacy Policy</a>
+	  		<a href="#">Do Not Sell My Information</a>
+	  		<a href="#">Curology Access Program</a>
+	    </div>
+      </div>
+     
+	    <div class="slide"><h1>문의사항이 있으신가요?</h1></div>
+	    <div class="slide"><h1>불편사항이 있으신가요?</h1></div>
+	    <div class="slide"><h1>이용시간<br>09:00-18:00</h1></div>
+    </div>
+  </div>
+</body>
+</html>
