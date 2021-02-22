@@ -66,7 +66,7 @@ header,body{width: 100%;height: 100%;}
 }
 .sliderWrap{position: relative;}
 .sliderWrap .nextBtn,.sliderWrap .prevBtn{
-	position: absolute;top: 55%;margin-top:-50px;cursor: pointer;
+	position: absolute;top: 50%;margin-top:-50px;cursor: pointer;
 }
 
 .sliderWrap .nextBtn{right: 0;}
@@ -90,7 +90,7 @@ header,body{width: 100%;height: 100%;}
 .content>ul>li.ct2st{}
 .content>ul>li.ct3st{width: 50%;}
 .content>ul>li.ct4st{background: #D8E6DD;}
-.content>ul>li.ct5st{background: #D8E6DD;}
+.content>ul>li.ct5st{background: #E8E5E6;}
 .content>ul>li.ct6st{width: 50%;}
 .content>ul>li.ct7st{height: 630px;}
 .content>ul>li.ct8st{width: 50%;}
