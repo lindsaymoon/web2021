@@ -95,6 +95,33 @@
 	.section.page4 .alist{margin-left: 600px;}
     .section.page4 .alist a{float: left;line-height: 40px;padding-right:30px;position: relative;bottom: -370px;}
     .section.page4 .email{position: relative;bottom: -370px;}
+    .section.page4 .present .box{position: relative;bottom:-150px;left: 110px;}
+    .section.page4 .present .fire1{
+    	position: relative;left: -480px;transform: rotate(-45deg);
+    	animation-name: fire1;
+		animation-duration: 1.2s;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+    }
+    .section.page4 .present .fire2{
+    	position: relative;left: 200px;transform: rotate(45deg);
+    	animation-name: fire2;
+			animation-duration: 1.2s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+    }
+    @keyframes fire1{
+		0%{top:0;left: -270px;}
+		/*50%{top:-250px;}*/
+		100%{top:-150px;left: -500px;}
+	}
+	@keyframes fire2{
+		0%{top:0;left: 0px;}
+		/*50%{top:-250px;}*/
+		100%{top:-150px;right: 500px;}
+	}
+
+	.section.page4 .slide.s4{margin: 0 auto;margin-top: 100px;}
 
 
     .scroll{
@@ -190,31 +217,39 @@
       </div>
       <div class="scroll">
 	    	<a href="#m2st"><img src="images/btn_scroll.png" alt=""></a>
-	    </div>
+	  </div>
     </div>
 
     <!-- section 4st -->
     <div class="section page4" data-anchor="m4st">
-      <div class="slide">
-      	<h1>We’re here for your skin’s full journey</h1>
-      	<p>It’s easy as uploading a no-makeup selfie, and in just a few<br>days you have a customized cream delivered right to<br>your door. It’s the solution to all your sucky skin problems.</p>
-      	<div class="alist">
-	  		<a href="#">Terms of Service</a>
-	  		<a href="#">Privacy Policy</a>
-	  		<a href="#">Do Not Sell My Information</a>
-	  		<a href="#">Curology Access Program</a>
+	    <div class="slide">
+	      	<h1>We’re here for your skin’s full journey</h1>
+	      	<p>It’s easy as uploading a no-makeup selfie, and in just a few<br>days you have a customized cream delivered right to<br>your door. It’s the solution to all your sucky skin problems.</p>
+	      	<div class="alist">
+		  		<a href="#">Terms of Service</a>
+		  		<a href="#">Privacy Policy</a>
+		  		<a href="#">Do Not Sell My Information</a>
+		  		<a href="#">Curology Access Program</a>
+		    </div>
 	    </div>
-      </div>
-     
+	    <div class="slide">
+	    	<h1>Event</h1>
+	    	<p>Leave a review on your social media!<br>We will choose five people who participated in and giveaway one of our products.</p>
+	    	<div class="present">
+	    		<img src="images/present.png" alt="" class="box">
+	    		<img src="images/fireworks.png" alt="" class="fire1">
+	    		<img src="images/fireworks.png" alt="" class="fire2">
+	    	</div>
+	    </div>
 	    <div class="slide">
 	    	<h1>Any Questions?</h1>
 	    	<p>If you have any questions, please send email to us.<br>We will answer you as soon as possible.</p>
 	    	<div class="email">
 			<a href="#">teamcurology@gmail.com</a>
 	    </div>
+	    <div class="slide s4">
+	    	<h1>Service Time<br>09:00-18:00</h1>
 	    </div>
-	    <div class="slide"><h1>불편사항이 있으신가요?</h1></div>
-	    <div class="slide"><h1>Working <br>09:00-18:00</h1></div>
     </div>
   </div>
 </body>
