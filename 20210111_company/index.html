@@ -7,8 +7,45 @@
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script>
+		$(function(){
+			var bHeight = $(document).height();
+
+			$(window).scroll(function(){
+       			var scrollY = $(window).scrollTop();
+       			$(".scrollY").html(scrollY + "px");
+
+       			if(scrollY > bHeight/2){
+		        	$(".top").addClass("view");
+		        }else{
+		        	$(".top").removeClass("view");
+        }
+       		});
+
+			$(".top").click(function(){
+        		$("html,body").animate({scrollTop:0},1000);
+      		});
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".ct2st a").colorbox({
+				iframe:true,
+				innerWidth:560,
+				innerHeight:315
+			});
+		});
+	</script>
+	<script>
+		new WOW().init();
+	</script>
+
 	<script>
 		$(document).ready(function(){
 			var	myslider = $(".slider").bxSlider({
@@ -120,19 +157,19 @@
 		</div>
 		<div class="content">
 			<ul class="clearfix">
-				<li class="ct1st">
+				<li class="ct1st wow fadeInDown">
 					<a href="#">
 						<img src="images/book.png" alt="뉴스레터신청하기">
 						<p>센터발간자료</p>
 					</a>
 				</li>
-				<li class="ct2st">
-					<a href="#">
+				<li class="ct2st wow fadeInDown">
+					<a href="https://www.youtube.com/embed/1ex_bNIFR1A">
 						<img src="images/longimg06.jpg" alt="영상" class="bgImg">
 						<img src="images/icon01_06.png" alt="실행" class="play">
 					</a>
 				</li>
-				<li class="ct3st">
+				<li class="ct3st wow fadeInDown">
 
 					<div class="sliderWrap">
 						<ul class="sliderTwo">
@@ -162,19 +199,19 @@
 						</div>
 					</div>
 				</li>
-				<li class="ct4st">
+				<li class="ct4st wow fadeInDown">
 					<a href="#">
 						<img src="images/honor.png" alt="뉴스레터신청하기">
 						<p>이용안내</p>
 					</a>
 				</li>
-				<li class="ct5st">
+				<li class="ct5st wow fadeInDown">
 					<a href="#">
 						<img src="images/news.png" alt="뉴스레터신청하기">
 						<p>NPO소식</p>
 					</a>
 				</li>
-				<li class="ct6st">
+				<li class="ct6st wow fadeInDown">
 					<a href="#">
 					<img src="images/longimg03.jpg" alt="빛과 에너지">
 					<div class="hbox">
@@ -185,7 +222,7 @@
 					</div>
 					</a>
 				</li>
-				<li class="ct7st">
+				<li class="ct7st wow fadeInDown">
 					<a href="#">
 					<img src="images/longimg07.jpg" alt="빛과 에너지">
 					<div class="hbox">
@@ -196,7 +233,7 @@
 					</div>
 					</a>
 				</li>
-				<li class="ct8st">
+				<li class="ct8st wow fadeInDown">
 					<a href="#">
 					<img src="images/longimg08.png" alt="빛과 에너지">
 					<div class="hbox">
@@ -207,17 +244,17 @@
 					</div>
 					</a>
 				</li>
-				<li class="ct9st">
+				<li class="ct9st wow fadeInDown">
 					<a href="#">
 						<img src="images/building.png" alt="뉴스레터신청하기">
 						<p>공간대관</p>
 					</a></li>
-				<li class="ct10st">
+				<li class="ct10st wow fadeInDown">
 					<a href="#">
 						<img src="images/network.png" alt="뉴스레터신청하기">
 						<p>동북권 아카이브</p>
 					</a></li>
-				<li class="ct11st">
+				<li class="ct11st wow fadeInDown">
 					<a href="#">
 					<img src="images/longimg09.jpeg" alt="빛과 에너지">
 					<div class="hbox">
@@ -238,40 +275,41 @@
 
 			<ul class="clearfix">
 				<li>
-					<duv class="card">
+					<div class="card">
 						<img src="images/cooperation.png" alt="engineering">
 						<div class="card_body">
 							<h3>NPO파트너페어</h3>
 							<p>NPO에게 필요한 자원과의 <br>만남</p>
 						</div>
-					</duv>
+					</div>
 				</li>
+				
 				<li>
-					<duv class="card">
+					<div class="card">
 						<img src="images/change.png" alt="engineering">
 						<div class="card_body">
 							<h3>변화사례</h3>
 							<p>NPO가 만든 변화 이야기</p>
 						</div>
-					</duv>
+					</div>
 				</li>
 				<li>
-					<duv class="card">
+					<div class="card">
 						<img src="images/teamwork.png" alt="engineering">
 						<div class="card_body">
 							<h3>서울동남권NPO지원센터</h3>
 							<p>동남권 NPO_연결을 경험하다 </p>
 						</div>
-					</duv>
+					</div>
 				</li>
 				<li>
-					<duv class="card">
+					<div class="card">
 						<img src="images/team.png" alt="engineering">
 						<div class="card_body">
 							<h3>서울시NPO지원센터</h3>
 							<p>공익활동 지원을 위한 연결과 협력 플랫폼</p>
 						</div>
-					</duv>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -279,7 +317,7 @@
 	<div class="second_cont">
 		<ul class="clearfix">
 
-			<li class="cont01">
+			<li class="cont01 wow fadeInLeft">
 				<a href="#">
 					<img src="images/main_book.jpg" alt="아카이브">
 					<div>
@@ -288,31 +326,49 @@
 					</div>
 				</a>
 			</li>
-			<li class="cont02">
+			<li class="cont02 wow fadeInDown">
 				<a href="#">
 					<img src="images/img_project_04.png" alt="공간대여">
 
 					<div class="down">
 						<h3>공간대여</h3>
 						<p>동북권 공익활동<br>활성화를 위해<br>공간과 자원을<br>제공합니다.</p>
+						<div class="rbox">
+							<div class="circle">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+						</div>
 					</div>
 				</a>
 			</li>
-			<li class="cont03">
+			<li class="cont03 wow fadeInDown">
 				<a href="#">
 					<img src="images/sub1.jpg" alt="아카이빙">
 					<div class="up">
 						<h3>아카이빙</h3>
 						<p>자원과 정보를공유하고 <br>활동가들의 목소리에<br>귀 기울입니다.</p>
+						<div class="rbox2">
+							<div class="circle">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+						</div>
 					</div>
 				</a>
 			</li>
-			<li class="cont04">
+			<li class="cont04 wow fadeInDown">
 				<a href="#">
 					<img src="images/img_project_02.png" alt="자원지원">
 					<div class="down">
 						<h3>자원지원</h3>
 						<p>필요한 자원을 지원해<br>모두의 지속가능한<br>성장을 돕습니다.</p>
+						<div class="rbox3">
+							<div class="circle">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+						</div>
 					</div>
 				</a>
 			</li>
@@ -320,10 +376,10 @@
 	</div>
 	<div class="third_cont">
 		<ul class="clearfix">
-			<li class="tcont1">
+			<li class="tcont1 wow fadeInDown">
 				<img src="images/gathering.gif" alt="">
 				<div class="title">
-					<h3>공익활동가들의 놀이터</h3>
+					<a href="#"><h3>공익활동가들의 놀이터</h3></a>
 					<p>동북권 공익활동가의 성장을 토대로<br>새로운 공공성을 창출합니다.</p>
 				</div>
 				<a href="#">
@@ -332,10 +388,10 @@
 					</div>
 				</a>
 			</li>
-			<li class="tcont2">
+			<li class="tcont2 wow fadeInDown">
 				<img src="images/wtogather.gif" alt="">
 				<div class="title">
-					<h3>시민사회 활성화</h3>
+					<a href="#"><h3>시민사회 활성화</h3></a>
 					<p>시민공익활동을 촉진하고<br>지역사회 혁신과 <br>상생을 실현합니다.</p>
 				</div>
 				<a href="#">
@@ -357,6 +413,7 @@
 		<div>
 			<p>01411 서울시 도봉구 마들로13길 84 창동 아우르네 2층<br>Tel : 02-906-2018  /  Fax : 02-906-2019  /  E-mail : info@dbnpo.kr<br>© Copyright 2019 Seoul Northeastern NPO Center. All rights reserved.</p>
 		</div>
-	</footer id="footer">
+	</footer>
+	<div class="top">top</div>
 </body>
 </html>
