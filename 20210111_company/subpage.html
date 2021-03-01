@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>subpage</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<style>
+	/*subslider1*/
+	#sub_header{height: 500px;position: relative;margin-bottom: 100px;}
+
+	.subsliderWrap{height: 500px;}
+	.subsliderWrap li{
+		height: 500px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+	}
+	.subsliderWrap li.subslider_1st{
+		background-image: url(images/subslider02.jpeg);
+	}
+	.subsliderWrap li.subslider_2st{
+		background-image: url(images/bslider03.jpeg);
+	}
+	.subsliderWrap li.subslider_3st{
+		background-image: url(images/subslider01.jpeg);
+	}
+	.subsliderWrap .slider_txt{
+		position: absolute;width: 500px;left: 50%;margin-left: -250px;
+		text-align: center;color: white;top: 35%;
+	}
+	.subsliderWrap .slider_txt h3{font-size: 2em;}
+	.subsliderWrap .slider_txt h3:after{
+		content: "";display: block;width: 300px;height: 2px;background: #fff;margin: 10px auto;
+	}
+	.subsliderWrap .bx-wrapper{
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border:0 none;
+		margin-bottom: 0;
+	}
+
+	.subsliderWrap{position: relative;}
+	.subsliderWrap .nextBtn,.prevBtn{
+		position: absolute;top: 55%;margin-top:-50px;cursor: pointer;
+	}
+
+	.subsliderWrap .nextBtn{right: 0;}
+
+
+	/*subpage content*/
+	.subnav{
+		width: 1260px;margin: 0 auto;position: absolute;bottom: 0px;
+		left: 50%;transform: translateX(-50%);
+	}
+	.subnav>ul>li{
+		float: left;padding: 20px;display: block;
+		border: 1px solid #ccc;background: #F3F1EA;
+		width: 315px;
+	}
+	.subnav>ul>li a{display: block;text-align: center;}
+	.subnav>ul>li:hover{background: rgba(123, 122, 119,0.3);}
+	.subnav>ul>li:hover a{color: white;}
+
+
+	/*sub show page moving*/
+	.movingPage{padding-left: 50px;padding-top: 30px;}
+	.movingPage>ul>li{
+		float: left;display: block;margin-bottom: 50px;
+		position: relative;padding-right: 22px;height: 22px;
+	}
+	.movingPage>ul>li>.one{position: absolute;left: 22px;top: 0;}
+	.movingPage>ul>li>.two{position: absolute;left: 70px;top: 0;}
+
+
+	/*sub body*/
+	.subbody{width: 1260px;height: 1220px;margin: 0 auto;}
+	.subbody>ul>h1{display: block;font-size: 3em;width: 260px;height: 100px;padding-left: 60px;margin-bottom: 60px;}
+	.subbody>ul>li>.longbar{width: 4px;height: 86px;background: green;margin-left: 40px;display: inline-block;}
+	.subbody>ul>li>h2{display: inline-block;padding-left: 20px;}
+	.subbody>ul>li>p{padding-left: 70px;padding-top: 40px;color: gray;padding-bottom: 50px;}
+	.subbody>ul>img{padding-left: 30px;}
+
+
+	/*line*/
+	.line{display: block;border: 1px solid #ccc;width: 100%;
+	margin-top: 100px;margin-bottom: 30px;}
+
+
+	/*sub footer*/
+	#subfooter{
+		display: block;;width: 1260px;height: 230px;padding-top: 40px;
+		position: relative;margin: 0 auto;
+	}
+
+	#subfooter>ul{position: absolute;left:500px;}
+	#subfooter>img{position: absolute;left: 60px;width: 250; height: 160px;}
+	#subfooter>ul>a{float: left;padding-right: 20px;padding-top: 23px;font-weight: bold;color: #333;}
+	#subfooter>div>p{position: absolute;left: 500px;padding-top: 60px;}
+	</style>
+	<script>
+		$(document).ready(function(){
+			var	myslider = $(".slider").bxSlider({
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$(".nextBtn").click(function(){
+					myslider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+					myslider.goToPrevSlide();
+			});
+
+
+			var slider = $(".sliderTwo").bxSlider({
+				controls:false,
+				pager:false,
+				auto:true
+			});
+			$(".nextBtn").click(function(){
+					slider.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+					slider.goToPrevSlide();
+			});
+
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class");
+				console.log(toggle);
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300);
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);
+				}
+			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style");
+			});
+		});
+	</script>
+</head>
+<body>
+	<header id="sub_header">
+		<div id="header_top" class="clearfix">
+			<h1 class="logo"><a href="index.html">NPO 지원센터</a></h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li>
+						<a href="subpage.html">센터소개</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="subpage2.html">센터소식</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="subpage3.html">NPO정보</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">아카이브</a>
+						<div class="bar"></div>
+					</li>
+					<li>
+						<a href="#">공간대관</a>
+						<div class="bar"></div>
+					</li>
+				</ul>
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		<div class="subsliderWrap">
+			<ul class="slider">
+				<li class="subslider_1st">
+					<!-- <img src="images/bslider03.jpeg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+				<li class="subslider_2st">
+					<!-- <img src="images/bslider01.jpeg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+				<li class="subslider_3st">
+					<!-- <img src="images/mainimg01.jpg"> -->
+					<div class="slider_txt">
+						<h3>센터소개</h3>
+						<p>서울시동북권NPO지원센터입니다.</p>
+					</div>
+				</li>
+			</ul>
+			<div class="btn clearfix">
+				<img src="images/main_prev.png" alt="" class="prevBtn">
+				<img src="images/main_next.png" alt="" class="nextBtn">
+			</div>
+		</div>
+		<div class="subnav">
+			<ul class="clearfix">
+				<li><a href="#">기관소개</a></li>
+				<li><a href="#">CI소개</a></li>
+				<li><a href="#">일하는 사람들</a></li>
+				<li><a href="#">찾아오시는 길</a></li>
+			</ul>
+		</div>
+		<div class="subbody">
+			<ul class="clearfix">
+				<div class="movingPage">
+					<ul>
+						<li>홈<span class="one">></span></li>
+						<li>센터소개<span class="two">></span></li>
+						<li><a href="#">기관소개</a></li>
+					</ul>
+				</div>
+				<h1>기관소개</h1>
+				<li>
+					<div class="longbar"></div>
+					<h2>서울시 동북권 풀뿌리 시민사회 활성화를 위해<br>지역문제를 함께 고민하고, 공익활동을 촉진하는<br>서울시동북권NPO지원센터입니다.</h2>
+					<p>서울시동북권NPO지원센터는 ‘서울특별시 시민공익활동의 촉진에 관한 조례’에 근거하여 설립되었으며,<br>사단법인 강북풀뿌리활동가포럼이 수탁 운영하고 있습니다.</p>
+				</li>
+				<img src="images/people.jpeg">
+			</ul>
+		</div>
+		<div class="line"></div>
+		<footer id="subfooter">
+			<img src="images/logo.png" alt="로고">
+
+			<ul class="clearfix">
+				<a href="#"><li>이용약관</li></a>
+				<a href="#"><li>개인정보처리방침</li></a>
+			</ul>
+			<div>
+				<p>01411 서울시 도봉구 마들로13길 84 창동 아우르네 2층<br>Tel : 02-906-2018  /  Fax : 02-906-2019  /  E-mail : info@dbnpo.kr<br>© Copyright 2019 Seoul Northeastern NPO Center. All rights reserved.</p>
+			</div>
+		</footer>
+</body>
+</html>
