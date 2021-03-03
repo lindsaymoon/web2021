@@ -12,6 +12,10 @@
 	<link rel="stylesheet" href="css/owl/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -21,8 +25,9 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
 	<style>
-		
+		.interview{justify-content: flex-end;}
 	</style>
 </head>
 <body>
@@ -56,7 +61,7 @@
 		</div>
 	</div>
 
-
+<!-- bxslider -->
 	<script>
 		$(function(){
 			const slider = $("").bxSlider({
@@ -131,8 +136,25 @@
 		</div>
 	</div>
 	
-	
-
+<!-- modal -->
+	<script>
+		$(document).ready(function(){
+			$(".video a").colorbox({
+				iframe:true,
+				innerWidth:500,
+				innerHeight:300
+			});
+		});
+	</script>
+	<div class="container">
+		<div class="row d-flex">
+			<div class="video col-md-4">
+				<a href="#"><img src="images/img6.jpg" alt="" type="button" data-toggle="modal" data-target=".modal"></a>
+			</div>
+			<p class="interview">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut laborum facere ipsa, alias quidem sit corporis commodi quos mollitia."</p>
+			
+		</div>
 	</div>
+
 </body>
 </html>
