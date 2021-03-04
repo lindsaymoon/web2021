@@ -27,35 +27,36 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
 	<style>
-		.video-body{justify-content: flex-end;}
+		.note{margin-top: 60px;}
+		.line{border: 1px solid #ccc; width: 1px;height: 60px;margin-right: 20px;}
 	</style>
 </head>
 <body>
 	<div class="headerWrap">
-		<div class="container mb-3">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				  <div class="container-fluid">
-				    <a class="navbar-brand" href="#">LOGO</a>
-				    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+
+				    <a href="#" class="navbar-brand">LOGO</a>
+				    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
 				      <span class="navbar-toggler-icon"></span>
 				    </button>
 				    <div class="collapse navbar-collapse" id="navbarNav">
 				      <ul class="navbar-nav ml-auto">
-				        <li class="nav-item">
-				          <a class="nav-link active" aria-current="page" href="#">WORLD</a>
+				        <li class="nav-item active">
+				          <a href="#!" class="nav-link active">WORLD</a>
 				        </li>
 				        <li class="nav-item">
-				          <a class="nav-link" href="#">NATURE</a>
+				          <a href="#!" class="nav-link">NATURE</a>
 				        </li>
 				        <li class="nav-item">
-				          <a class="nav-link" href="#">ABOUT</a>
+				          <a href="#!" class="nav-link">ABOUT</a>
 				        </li>
 				        <li class="nav-item">
-				          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">FUTURE</a>
+				          <a href="#!" class="nav-link">FUTURE</a>
 				        </li>
 				      </ul>
 				    </div>
-				  </div>
+
 				</nav>
 			</div>
 		</div>
@@ -146,13 +147,20 @@
 			});
 		});
 	</script>
-	<div class="container">
-		<div class="row d-flex">
-			<div class="video col-md-4">
+	<div class="container mb-5">
+		<div class="row">
+			<div class="video col-md-5">
 				<a href="#"><img src="images/img6.jpg" alt="" type="button" data-toggle="modal" data-target=".modal"></a>
 			</div>
-			<p class="video-body">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut laborum facere ipsa, alias quidem sit corporis commodi quos mollitia."</p>
-			
+			<div class="video-body col-md-7 order-1 pt-5">
+				<p class="text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ut laborum facere ipsa, alias quidem sit corporis commodi quos mollitia."</p>
+				<div class="note d-flex">
+					<div class="line"></div>
+					<h4>Lorem, ipsum.</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+				</div>
+				
+			</div>
 		</div>
 	</div>
 
