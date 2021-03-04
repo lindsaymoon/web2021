@@ -83,13 +83,6 @@ legend,.blind{
 	width: 0;height: 29px;border-right: 1px solid #cdcdcd;
 	text-indent: -999px;margin-top: 10px;
 }
-#content fieldset .field.birth .field_wall,
-#content fieldset .field.confirm .field_wall
-{
-	float: left;
-	width: 0;height: 29px;border-right: 1px solid #cdcdcd;
-	text-indent: -999px;margin-top: 10px;
-}
 
 #content fieldset .field.birth input,
 #content fieldset .field.confirm input
