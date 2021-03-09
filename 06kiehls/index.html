@@ -4,14 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
-	<link rel="stylesheet" href="css/colorbox.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
@@ -30,67 +26,71 @@
 	<div class="headerWrap">
 		<div class="headerTop">키엘 공식 온라인 몰 단독! 신규 가입 후 첫 구매 시 전 품목 15%OFF</div>
 		<div class="header">
-			<ul class="clearfix">
-				<li class="menu">
-					<ul class="clearfix">
-						<li>로그인</li><span>|</span>
-						<li>회원가입</li><span>|</span>
-						<li>주문/배송조회</li>
-					</ul>
-				</li>
-				<li>
-					<a href="index.html"><img src="kimages/logo.png"></a>
-				</li>
-				<li>
-					<form action="#" method="post">
-						<fieldset>
-							<div class="field">
-								<label for="user-id" class="blind">아이디</label>
-								<input type="text" id="user-id" name="userid" class="inp-field">
-								<img src="kimages/glass.png" alt="" class="glass">
-							</div>
-						</fieldset>
-					</form>
-				</li>
-				<img src="kimages/shopping.png" alt="">
-			</ul>
-		</div>
-		<div class="line"></div>
-		<div class="navbar">
-			<ul>
-				<li><img src="kimages/toggle.png" alt="" class="toggle">카테고리</li>
-				<li><img src="kimages/letter.png" alt="" class="letter"></li>
-				<li>이벤트</li>
-				<li>신상품</li>
-				<li>베스트</li>
-				<li>쿠폰/혜택</li>
-				<li>반려동물</li>
-				<li>남성</li>
-			</ul>
+			<div class="l-interface">
+				<ul class="clearfix">
+					<a href="#"><li>로그인</li></a><span>|</span>
+					<a href="#"><li>회원가입</li></a><span>|</span>
+					<a href="#"><li>주문/배송조회</li></a>
+				</ul>
+			</div>
+			<div class="c-interface">
+				<a href="index.html"><img src="kimages/logo.png"></a>
+			</div>
+			<div class="r-interface">
+				<form action="#" method="post">
+					<fieldset>
+						<div class="field">
+							<label for="user-id" class="blind">아이디</label>
+							<input type="text" id="user-id" name="userid" class="inp-field">
+							<img src="kimages/glass.png" alt="">
+						</div>
+					</fieldset>
+				</form>
+				<img src="kimages/shopping.png" alt="" class="shopping">
+			</div>
 		</div>
 
-		<div class="container">
-			<ul class="clearfix">
-				<li>
-					<ul class="slider">
-						<li>
-							<img src="kimages/main-bg01.jpg" alt="">
-							<div class="sldiertxt">
-								<p><strong>이렇게 행복할 수가</strong><br>키엘X셀렉샵 최대 20% 혜택!<br>공식 온라인 몰 단독 전품목 UP TO 15%!</p>
-								<a href="#">자세히보기</a>
-							</div>
-						</li>
-						<li>
-							<img src="kimages/main-bg02.jpg" alt="">
-							<div class="sldiertxt">
-								<p><strong>머리부터 발끝까지 보습해요</strong><br>보습 제품 1만원 이상 구매시 무료배송!</p>
-								<a href="#">자세히보기</a>
-							</div>
-						</li>
-					</ul>
-				</li>
-			</ul>
+		<div class="line"></div>
+		<div class="navbar">
+				<div class="nav-left"><img src="kimages/toggle.png" alt="" class="toggle">카테고리</div>
+				<ul class="clearfix">
+					<li><img src="kimages/letter.png" alt="" class="letter"></li>
+					<li>이벤트</li>
+					<li>신상품</li>
+					<li>베스트</li>
+					<li>쿠폰/혜택</li>
+					<li>반려동물</li>
+					<li>남성</li>
+				</ul>
+		</div>
+
+	</div>
+	<div class="visual">
+		<ul class="slider">
+			<li>
+				<img src="kimages/main-bg01.jpg" alt="">
+				<div class="slidertxt">
+					<h4>이렇게 행복할 수가</h4>
+					<p>키엘X셀렉샵 최대 20% 혜택!<br>공식 온라인 몰 단독 전품목 UP TO 15%!</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+			<li>
+				<img src="kimages/main-bg02.jpg" alt="">
+				<div class="slidertxt">
+					<h4>머리부터 발끝까지 보습해요</h4>
+					<p>보습 제품 1만원 이상 구매시 무료배송!</p>
+					<a href="#">자세히보기</a>
+				</div>
+			</li>
+		</ul>
+		<div class="roundbox">
+			<img src="kimages/slider-prev.png" alt="">
+			<p>1/2</p>
+			<img src="kimages/slider-next.png" alt="">
 		</div>
 	</div>
+
+	
 </body>
 </html>
