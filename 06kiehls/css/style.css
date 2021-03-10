@@ -3,6 +3,8 @@
 html,body{width: 100%;height: 100%;}
 .headerWrap{width: 100%;min-width:1200px}
 .headerTop{width: 100%;height: 50px;background: #262c28;font-size: 15px;color: white;text-align: center;line-height: 50px;}
+.hwrap{margin: 0 auto;}
+
 .header{width: 1920px;height: 100px;position: relative;}
 .l-interface{float: left;}
 .c-interface{position: absolute;top: 15px;left: 890px;}
@@ -13,7 +15,7 @@ html,body{width: 100%;height: 100%;}
 .l-interface span{float: left;padding-right: 10px;color: #7e7882;}}
 
 
-fieldset{border: none;}
+fieldset{border:none;}
 .field{position: relative;}
 .field input{background: #f0f0f0;;width: 300px;border:none;height: 50px;margin-top: 12px;}
 .field img{position: absolute;top: 25px;right: 10px;cursor: pointer;}
@@ -31,7 +33,7 @@ fieldset{border: none;}
 
 
 /*slider*/
-.visual{width: 100%;background: red;}
+.visual{width: 100%;position: relative;}
 .visual .slider img{width: 100%;}
 .visual .slider .slidertxt{position: absolute;top: 0;left: 0;padding-left: 400px;padding-top: 170px;}
 .visual .slider .slidertxt h4{font-size: 32px;margin-bottom: 13px;}
@@ -46,8 +48,12 @@ fieldset{border: none;}
     margin-bottom: 0px;
 }
 
-.slider .roundbox{
+.visual .roundbox{
 	border-radius: 30px;background: rgba(150,150,150,0.3);
-	width: 100px;height: 20px;position: absolute;bottom: 0;left: 0;
+	width: 110px;height: 34px;position:absolute;bottom: 15px;left: 915px;
+	color: white;
 }
-.slider .roundbox img{width: 20px;height: 20px;}
+.visual .roundbox img{width: 12px;height: 20px;cursor: pointer;}
+.visual .roundbox .round-prev{position: absolute;top: 7px;left: 7px;}
+.visual .roundbox .round-next{position: absolute;top: 7px;right: 7px;}
+.visual .roundbox p{width: 100px;height: 20px;position: absolute;top: 5px;left: 38px;}
