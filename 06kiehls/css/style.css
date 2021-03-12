@@ -131,7 +131,7 @@ display: inline-block;}
 .dealtxt .s-txt{font-size: 18px;}
 
 .s-price{margin-top: 25px;margin-bottom: 5px;font-size: 14px;color: #5a585d;}
-.s-price div{height: 1px;width: 54px;background: #5a585d;position: relative;top: -10px;}
+.s-price div{height: 1px;width: 54px;background: #5a585d;position: relative;top: -9px;}
 
 .dealprice p{float: left;font-size: 18px;}
 .d-percent{color: #cb0a1b;font-weight: bold;padding-right: 5px;}
@@ -140,7 +140,52 @@ display: inline-block;}
 
 
 /*베스트*/
-.best ul li{float: left;}
-.number-red{}
-.number-red p{}
-.number-red div{}
+.best{display: flex;justify-content: center;position: relative;padding-bottom: 100px;}
+.best ul li{float: left;padding-right: 39px;}
+.best ul li:last-child{padding-right: 0;}
+.best ul>li>p{text-align: center;padding-top: 10px;}
+.best ul>h2{padding-bottom: 40px;}
+.best ul>a{position: absolute;right: 330px;top: 15px;color: #c0bbc2;font-size: 12px}
+
+.number-red p{font-size: 35px;padding-left: 10px;}
+.number-red div{background: #fd0915;height: 2px;width: 40px;}
+
+
+/*인스타*/
+.insta{margin-bottom: 25px;}
+.insta>ul{display: flex;justify-content: center;}
+.insta h2{padding-bottom: 40px;position: relative;left: 335px;}
+.insta ul li{float: left;margin-right: 30px;position: relative;}
+.insta ul li:last-child{padding-right: 0;}
+.insta .insta-icon{position: absolute;top: 5px;right: 5px;}
+
+.insta02{display: flex;justify-content: center;}
+.insta02 ul{position: relative;left: -15px;}
+.insta02 ul li{float: left;margin-right: 30px;position: relative;margin-bottom: 100px;}
+.insta02 ul li:last-child{margin-right: 0;}
+.insta02 .insta-icon{position: absolute;top: 5px;right: 5px;}
+
+
+/*푸터*/
+.footer{background: #fbf8ef;height: 390px;}
+.footer ul{display: flex;justify-content: center;}
+.footer ul li{padding-right: 100px;margin-top: 58px;}
+.footer ul li:last-child{padding-right: 0;}
+.footer ul li p{font-weight: bold;margin-bottom: 24px;}
+.footer ul li a{font-size: 13px;display: flex;align-items: flex-start;line-height: 18px;}
+.footer ul li a img{margin-bottom: 5px;margin-right: 5px;}
+.footer ul li:nth-child(5){margin-right: 90px;}
+.footer ul .f-line{width: 1px;height: 110px;background: #c0bbc2;position: relative;right: 100px;top: 60px;}
+
+.footer .downline{height: 1px;width: 820px;background: #ccc;margin-bottom: 25px;margin-top: 25px;position: relative;left: 400px;}
+
+
+.under {}
+.under .under01{display: flex;justify-content: flex-start;}
+.under .under01 a{font-size: 13px;}
+.under .under01 span{font-size: 13px;}
+.under .under01 p{}
+
+.under .under02{}
+.under .under02 p{font-size: 12px;font-weight: normal;}
+.under .under02 a{font-size: 12px;border: 1px solid #000;width: 90px;list-style: 20px;text-align: center;}
