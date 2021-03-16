@@ -17,15 +17,21 @@
 				controls:false,
 				pager:false				
 			});
+			$(".nextBtn").click(function(){
+					mySlider.goToNextSlide();
+				});
+			$(".prevBtn").click(function(){
+					mySlider.goToPrevSlide();
+				});
 			var mySlider = $(".slider2").bxSlider({
 				auto:true,
 				controls:false,
 				pager:false				
 			});
-			$(".nextBtn").click(function(){
+			$(".nextBtn2").click(function(){
 					mySlider.goToNextSlide();
 				});
-			$(".prevBtn").click(function(){
+			$(".prevBtn2").click(function(){
 					mySlider.goToPrevSlide();
 				});
 		});
@@ -80,63 +86,121 @@
 			<div class="main_left">
 				<div class="reserve">
 					<ul class="clearfix">
-						<li>공항예약</li>
-						<li>호텔예약</li>
-						<li>렌트카</li>
-						<li>휴양지</li>
+						<li><a href="#">공항예약</a></li>
+						<li><a href="#">호텔예약</a></li>
+						<li><a href="#">렌트카</a></li>
+						<li><a href="#">휴양지</a></li>
 					</ul>
-					<div class="choiceWrap1">
-						 <form action="#" method="post">
-						 	<fieldset>
-						 		<legend>가고싶은 나라를 선택하세요.</legend>
-						 		<div class="field">
-						 			<label for="country"></label>
-						 			<input type="text" id="country" name="countrychoice" placeholder="선택하세요." required class="firstChoice">
-						 		</div>
-						 	</fieldset>
-						 </form>
-					</div>
-					 <div class="choiceWrap2">
-						 <form action="#" method="post">
-						 	<fieldset>
-						 		<legend>출발일</legend>
-						 		<div class="field">
-						 			<label for="goDate"></label>
-						 			<input type="text" id="goDate" name="countrychoice" placeholder="2021/01/01" required class="firstChoice">
-						 		</div>
-						 	</fieldset>
-						 </form>
-					</div>
-					<div class="choiceWrap3">
-						 <form action="#" method="post">
-						 	<fieldset>
-						 		<legend>도착일</legend>
-						 		<div class="field">
-						 			<label for="arrDate"></label>
-						 			<input type="text" id="arrDate" name="countrychoice" placeholder="2021/01/01" required class="firstChoice">
-						 		</div>
-						 	</fieldset>
-						 </form>
-					</div>
-				</div>
+					<form action="#" method="get">	
+						<div class="country">
+							<legend>가고 싶은 나라를 선택하세요.</legend>
+							<select name="contry">
+								<option value="1">미국</option>
+								<option value="2">영국</option>		
+								<option value="2">프랑스</option>		
+								<option value="2">베트남</option>		
+								<option value="2">중국</option>		
+								<option value="2">홍콩</option>		
+								<option value="2">싱가폴</option>		
+								<option value="2">스페인</option>		
+								<option value="2">이탈리아</option>		
+								<option value="2">호주</option>		
+							</select>
+						</div>
+						<div class="s-low">	
+							<div class="start">
+								<legend>출발일</legend>
+								<select name="start">
+									<option value="1">2021/03/17</option>
+									<option value="2">2021/03/18</option>
+									<option value="3">2021/03/19</option>
+									<option value="4">2021/03/20</option>
+									<option value="5">2021/03/21</option>
+									<option value="6">2021/03/22</option>
+									<option value="7">2021/03/23</option>
+									<option value="8">2021/03/24</option>
+									<option value="9">2021/03/25</option>
+									<option value="10">2021/03/26</option>
+								</select>
+							</div>
+							<div class="arrive">
+								<legend>도착일</legend>
+								<select name="arrive">
+									<option value="1">2021/03/17</option>
+									<option value="2">2021/03/18</option>
+									<option value="3">2021/03/19</option>
+									<option value="4">2021/03/20</option>
+									<option value="5">2021/03/21</option>
+									<option value="6">2021/03/22</option>
+									<option value="7">2021/03/23</option>
+									<option value="8">2021/03/24</option>
+									<option value="9">2021/03/25</option>
+									<option value="10">2021/03/26</option>
+								</select>
+							</div>
+						</div>
+						<div class="t-low">
+							<div class="seat">
+								<legend>좌석등급</legend>
+							
+								<select name="seat">
+									<option value="1">일반석</option>
+									<option value="2">비지니스석</option>		
+								</select>
+							</div>
 
-				<div class="leftbox">
-					<img src="images/leftbox.jpg" alt="">
-					<div class="blueline">
-						<h4>프랑스</h4>
-						<p>￦1,900,000~</p>
-						<div>〉</div>
-					</div>
+							<div class="adult">
+								<legend>성인</legend>
+								<select name="adult">
+									<option value="1">1</option>
+									<option value="2">2</option>		
+									<option value="2">3</option>		
+									<option value="2">4</option>		
+									<option value="2">5</option>		
+									<option value="2">6</option>		
+									<option value="2">7</option>		
+									<option value="2">8</option>		
+									<option value="2">9</option>		
+									<option value="2">10</option>		
+								</select>
+							</div>
+							<div class="child">
+								<legend>아이</legend>
+								<select name="child">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="2">3</option>		
+									<option value="2">4</option>		
+									<option value="2">5</option>		
+								</select>
+							</div>
+							
+						</div>
+						<div class="push-search">
+							<button type="button" class="click">검색하기</button>
+						</div>
+					</form>
 				</div>
-				<div class="rightbox">
-					<img src="images/rightbox.jpg" alt="">
-					<div class="blueline">
-						<h4>일본</h4>
-						<p>￦890,000~</p>
-						<div>〉</div>
+				<div class="low">
+					<div class="low-left">
+						<img src="images/leftbox.jpg" alt="">
+						<div class="blueline">
+							<h4>프랑스</h4>
+							<p>￦1,900,000~</p>
+							<div>〉</div>
+						</div>
+					</div>
+					<div class="low-right">
+						<img src="images/rightbox.jpg" alt="">
+						<div class="blueline2">
+							<h4>일본</h4>
+							<p>￦890,000~</p>
+							<div>〉</div>
+						</div>
 					</div>
 				</div>
 			</div>
+
 			<div class="main_right">
 				<div class="travelGo">
 					<h2>TRAVEL GO</h2>
@@ -147,7 +211,7 @@
 		</div>
 
 		<div class="content">
-			<ul>
+			<ul class="clearfix">
 				<li class="one">
 					<ul class="slider">
 						<li class="sOne">
@@ -169,13 +233,13 @@
 							</div>
 						</li>
 					</ul>
-					<div class="nextBtn"><img src="images/barR.gif" alt=""></div>
-					<div class="prevBtn"><img src="images/barL.gif" alt=""></div>
+					<div class="nextBtn"><img src="images/barR.png" alt=""></div>
+					<div class="prevBtn"><img src="images/barL.png" alt=""></div>
 				</li>
 			</ul>
 			<ul>
 				<li class="two">
-					<ul class="slider2">
+					<ul class="slider2 clearfix">
 						<li class="sTwo">
 							<img src="images/content02.jpg" alt="">
 							<div>
@@ -195,8 +259,8 @@
 							</div>
 						</li>
 					</ul>
-					<div class="nextBtn"><img src="images/barR.gif" alt=""></div>
-					<div class="prevBtn"><img src="images/barL.gif" alt=""></div>
+					<div class="nextBtn2"><img src="images/barR.png" alt=""></div>
+					<div class="prevBtn2"><img src="images/barL.png" alt=""></div>
 				</li>	
 			</ui>
 				

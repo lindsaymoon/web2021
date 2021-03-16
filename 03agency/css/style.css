@@ -47,7 +47,7 @@
 	transition: 0.3s;
 }
 .ctTwo li:first-child{border-left: 1px solid #ccc;}
-.ctTwo li:hover{background: rgba(0,0,200,0.3);color: #fff;}
+.ctTwo li:hover{background: powderblue;color: #fff;}
 
 
 
@@ -68,66 +68,73 @@
 	margin: 0 auto;padding-top: 50px;
 }
 
-/*메인 왼쪽*/
+/*예약부분*/
 .main_left{float: left;position: relative;width: 482.5px;height: 512.5px;}
 .reserve{
 	display: block;
-	width:482.5px;height: 280px;
+	width:480px;height: 280px;
 	background:white;position: relative;
 }
-.reserve ul li{
+.reserve ul li a{
 	display: block;width: 130px;height: 70px;
 	background: darkblue;text-align: center;
 	padding-top: 25px;color: #fff;
-	border-bottom: 1px solid #ccc;
-}
-.reserve ul li:first-child{background-color: white;color: #000;}
-
-.reserve .choiceWrap1{width: 280px;position: absolute;top: 20px;right:35px;}
-.reserve .choiceWrap1 fieldset{border-style: none;}
-.reserve .choiceWrap1 legend{font-size: 14px;}
-
-.reserve .choiceWrap2{width: 60px;position: absolute;top: 70px;left: 150px;}
-.reserve .choiceWrap2 fieldset{border-style: none;}
-.reserve .choiceWrap2 legend{font-size: 14px;}
-
-.reserve .choiceWrap3{width: 60px;position: absolute;top: 70px;right: 100px;}
-.reserve .choiceWrap3 fieldset{border-style: none;}
-.reserve .choiceWrap3 legend{font-size: 14px;}
-
-
-.leftbox img,.rightbox img{
-	width: 233px;height: 233px;
-	padding-top: 15px;
-	position: absolute;
-}
-.leftbox{float: left;transition: 0.3s;}
-.rightbox{position: absolute;width: 233px;right: 0;transition: 0.3s;}
-.leftbox:hover img{transform:scale(0.9);}
-.rightbox:hover img{transform: scale(0.9);}
-
-.blueline{
-	width: 233px;height: 50px;
-	background: rgb(0,0,60);
-	color: #fff;
-	margin-top: 150px;
-	text-align: center;
-	line-height: 50px;
+	border-bottom: 1px solid white;
 	transition: 0.3s;
-	cursor: pointer;
 }
-.leftbox p,.rightbox p{color: rgb(0,200,0);}
-.leftbox p,.leftbox h4,.leftbox div{display: inline-block;}
-.rightbox p,.rightbox h4,.rightbox div{display: inline-block;}
-.leftbox .blueline{position: absolute;top: 313px;}
-.rightbox .blueline{position: absolute;top: 33px;}
+.reserve ul li{width: 130px;}
+.reserve ul li:hover a{background: white;color: black;}
+.reserve ul li:first-child a{background-color: white;color: #000;}
+.reserve ul li:last-child a{border-bottom: 0 none;}
 
-.blueline:hover{background: #eee;color: red;}
+.reserve form{position: absolute;top: 30px;right: 25px;width: 300px;}
+.reserve form input{line-height: 23px;border:1px solid #ccc;}
+
+.reserve form legend{font-size: 13px;}
+.reserve  .start label,
+.reserve  .arrive label
+{
+	display: block;float: left;width: 50px;height: 20px;
+	border-right: 1px solid #eee;
+	text-align: center;line-height: 49px;color: #999;
+}
+
+.reserve .start select,
+.reserve .arrive select,
+.reserve .seat select,
+.reserve .adult select,
+.reserve .child select{
+	float: left;
+	width: 110px;height: 25px;border:  1px solid #ccc;
+	font-size: 15px;line-height: 29px;margin-top: 10px;
+	margin-left: 10px;margin-right: 7px;cursor: pointer;
+}
+.reserve .country{position: relative;left: 23px;}
+.reserve .country legend{width: 250px;display: block;display: flex;align-items: flex-start;}
+.reserve .country select{
+	width: 237px;height: 25px;border: 1px solid #ccc;
+	font-size: 15px;line-height: 29px;margin-top: 10px;
+	margin-left: 10px;margin-right: 7px;cursor: pointer;
+}
+.reserve .t-low .child select,
+.reserve .t-low .adult select
+{width: 47px;cursor: pointer;}
+.s-low,
+.t-low,
+{width: 280px;}
+.s-low{margin-top: 10px;display: flex;justify-content: center;}
+.t-low{margin-top: 10px;display: flex;justify-content: center;}
+.push-search button{
+	font-size: 13px;line-height: 30px;width: 200px;
+	background: powderblue;text-align: center;color: white;margin: 0 auto;
+	border:0 none;cursor: pointer;margin-top: 20px;
+}
+.push-search{display: flex;justify-content: center;}
+.push-search:hover button{background: orange;}
 
 
-
-/*메인 오른쪽*/
-.main_right{float: right;width: 482.5px;height: 512.5px;background: pink;}
+/*메인 오른쪽 트래블고*/
+.main_right{float: right;width: 482.5px;height: 515px;background: pink;}
 .travelGo{display:block;width: 300px;height: 30px;padding-top: 10px;padding-left: 20px;}
 .travelGo h2{font-size: 40px;color: rgb(0,0,100);}
 .travelGo p{
@@ -137,10 +144,36 @@
 .travelGo img{}
 
 
+/*예약아래 사진2개*/
+.low{float: left;position: relative;width: 481px;height: 233px;}
+.low-left,.low-right{margin-top: 15px;overflow: hidden;transition: 0.3s;}
+.low-left{position: absolute;left: 0;}
+.low-right{position: absolute;right: 0;}
+.low-left img,.low-right img{transition: 0.3s;}
+.low-left:hover img,.low-right:hover img{transform: scale(1.2);}
+
+.blueline,.blueline2{
+	position: absolute;bottom: 0;left: 0;
+	width: 233px;height: 50px;
+	background: rgb(0,0,60);
+	color: #fff;
+
+	text-align: center;
+	line-height: 50px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.low-left p,.low-right p{color: rgb(0,200,0);}
+.low-left p,.low-left h4,.low-left div{display: inline-block;}
+.low-right p,.low-right h4,.low-right div{display: inline-block;}
+
+.blueline:hover,
+.blueline2:hover{background: #eee;color: red;}
+
 
 
 /*콘텐츠 첫번째줄*/
-.content{width: 980px;height: 252px;margin: 0 auto;padding-top: 15px;background: skyblue;}
+.content{width: 980px;height: 252px;margin: 0 auto;padding-top: 15px;}
 
 .content>ul>li{float: left;padding-right: 15px;}
 .content>ul>li:last-child{padding-right: 0;}
